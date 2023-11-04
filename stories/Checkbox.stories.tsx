@@ -7,7 +7,7 @@ export default {
   component: Checkbox,
   argTypes: {
     isRounded: { control: 'boolean' },
-    indeterminate: { control: 'boolean' }, // Tambahkan control untuk prop indeterminate
+    indeterminate: { control: 'boolean' },
   },
 } as Meta;
 

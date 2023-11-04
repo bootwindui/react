@@ -1,22 +1,20 @@
 import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import ToggleSwitch, {
-  ToggleSwitchProps,
-} from '../src/components/ToggleSwitch';
+import Toggle, { ToggleProps } from '../src/components/Toggle';
 
 import { FaMoon, FaSun } from 'react-icons/fa6';
 
 export default {
-  title: 'Components/ToggleSwitch',
-  component: ToggleSwitch,
+  title: 'Components/Toggle',
+  component: Toggle,
   argTypes: {
     enabled: { control: 'boolean' },
   },
 } as Meta;
 
-export const TogglableSwitch = (args: ToggleSwitchProps) => (
+export const ToggleDark = (args: ToggleProps) => (
   <div className="flex flex-col space-y-4">
-    <ToggleSwitch
+    <Toggle
       onToggle={isEnabled => console.log('Switch toggled:', isEnabled)}
       color="primary"
       iconOn={
@@ -24,7 +22,7 @@ export const TogglableSwitch = (args: ToggleSwitchProps) => (
       }
       iconOff={<FaMoon className="text-gray-500 h-3 w-3 mx-auto mt-1" />}
     />
-    <ToggleSwitch
+    <Toggle
       onToggle={isEnabled => console.log('Switch toggled:', isEnabled)}
       color="secondary"
       iconOn={
@@ -32,12 +30,11 @@ export const TogglableSwitch = (args: ToggleSwitchProps) => (
       }
       iconOff={<FaMoon className="text-gray-500 h-3 w-3 mx-auto mt-1" />}
     />
-    <ToggleSwitch
+    <Toggle
       onToggle={isEnabled => console.log('Switch toggled:', isEnabled)}
       color="primary"
     />
-
-    <ToggleSwitch
+    <Toggle
       onToggle={isEnabled => console.log('Switch toggled:', isEnabled)}
       color="secondary"
     />

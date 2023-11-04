@@ -5,14 +5,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export interface ToggleSwitchProps {
+export interface ToggleProps {
   onToggle: (isEnabled: boolean) => void;
-  color: 'indigo' | 'black';
-  iconOn: React.ReactNode; // Menambahkan properti iconOn
-  iconOff: React.ReactNode; // Menambahkan properti iconOff
+  color: 'primary' | 'secondary';
+  iconOn: React.ReactNode;
+  iconOff: React.ReactNode;
 }
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
+const Toggle: React.FC<ToggleProps> = ({
   onToggle,
   color,
   iconOn,
@@ -20,7 +20,7 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
 }) => {
   const [enabled, setEnabled] = useState(false);
 
-  const switchStyles = {
+  const toggleStyles = {
     primary: enabled ? 'bg-primary' : 'bg-gray-200',
     secondary: enabled ? 'bg-[#2D3643]' : 'bg-gray-200',
   };
@@ -30,7 +30,7 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
       checked={enabled}
       onChange={setEnabled}
       className={classNames(
-        switchStyles[color],
+        toggleStyles[color],
         'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-1'
       )}
     >
@@ -47,4 +47,4 @@ const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
   );
 };
 
-export default ToggleSwitch;
+export default Toggle;

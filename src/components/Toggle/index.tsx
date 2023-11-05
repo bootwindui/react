@@ -12,12 +12,7 @@ export interface ToggleProps {
   iconOff: React.ReactNode;
 }
 
-const Toggle: React.FC<ToggleProps> = ({
-  onToggle,
-  color,
-  iconOn,
-  iconOff,
-}) => {
+const Toggle: React.FC<ToggleProps> = ({ color, iconOn, iconOff }) => {
   const [enabled, setEnabled] = useState(false);
 
   const toggleStyles = {

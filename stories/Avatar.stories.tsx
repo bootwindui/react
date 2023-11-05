@@ -36,6 +36,6 @@ export const Avatars = (args: AvatarProps) => (
       alt="User 2"
       {...args}
     />
-    <Avatar alt="User 2" {...args} />
+    <Avatar showPlaceholder={true} alt="User 2" {...args} />
   </div>
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AvatarProps {
+export interface AvatarProps {
   src?: string;
   alt: string;
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';

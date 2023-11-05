@@ -36,7 +36,6 @@ export const Avatars = (args: AvatarProps) => (
       alt="User 2"
       {...args}
     />
-    <Avatar alt="User 3" {...args} />
-    <Avatar rounded="md" notificationDot="green" showPlaceholder={true} />
+    <Avatar alt="User 2" {...args} />
   </div>
 );

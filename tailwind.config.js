@@ -8,5 +8,12 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    'text-2xl',
+    'text-3xl',
+    {
+      pattern: /bg-(red|green|gray)-(200|300|400|500)/,
+    },
+  ],
   plugins: [require('@tailwindcss/forms')],
 };

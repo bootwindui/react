@@ -29,8 +29,6 @@ const Avatar: React.FC<AvatarProps> = ({
     notificationDotColor = '300';
   }
 
-  const notificationDotSizeClass = 'h-2 w-2';
-
   const shouldShowPlaceholder = !src && showPlaceholder;
 
   return (

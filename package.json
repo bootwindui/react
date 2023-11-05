@@ -11,15 +11,15 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && tsdx watch",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && tsdx build",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && tsdx watch",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-    "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "storybook": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "build-storybook": "set NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
     "chromatic": "npx chromatic --project-token=chpt_f2040c498eb8da3"
   },
   "peerDependencies": {

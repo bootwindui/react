@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_f2040c498eb8da3"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -36,7 +37,9 @@
     "trailingComma": "es5"
   },
   "name": "tailwind-typescript-components",
-  "author": "codeflowjs",
+  "author": {
+    "name": "codeflowjs"
+  },
   "module": "dist/tailwind-typescript-components.esm.js",
   "size-limit": [
     {
@@ -77,5 +80,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/forms": "^0.5.6"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "tailwind-typescript-components@0.1.0"
 }

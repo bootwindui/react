@@ -57,6 +57,7 @@
     "@storybook/addon-links": "^7.6.0-alpha.4",
     "@storybook/addon-mdx-gfm": "^7.6.0-alpha.4",
     "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/blocks": "^7.6.0-alpha.4",
     "@storybook/react": "^7.6.0-alpha.4",
     "@storybook/react-vite": "^7.6.0-alpha.4",

@@ -11,14 +11,14 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && tsdx watch",
     "build": "pnpm run -r --filter packages/* build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint ./**/*.ts --fix",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_f2040c498eb8da3"
+    "release": "bumpp package.json packages/*/package.json --tag --commit --push && pnpm -r publish --access public"
   },
   "peerDependencies": {
     "react": "^18.2.0",

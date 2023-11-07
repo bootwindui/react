@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Switch } from '@headlessui/react';
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
 export interface ToggleProps {
-  onToggle: (isEnabled: boolean) => void;
-  color: 'primary' | 'secondary';
-  iconOn: React.ReactNode;
-  iconOff: React.ReactNode;
+  onToggle?: (isEnabled: boolean) => void
+  color: 'primary' | 'secondary'
+  iconOn?: React.ReactNode
+  iconOff?: React.ReactNode
 }
 
 const Toggle: React.FC<ToggleProps> = ({ color, iconOn, iconOff }) => {

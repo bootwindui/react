@@ -1,6 +1,6 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
-import { Button, ButtonProps } from '../src/components/Button';
+import { Meta } from '@storybook/react';
+import { Button, ButtonProps } from '../src/index';
 
 import { FaRegEnvelope } from 'react-icons/fa6'; // Import ikon dari react-icons atau dari sumber lain
 

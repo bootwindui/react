@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { ReactNode } from 'react';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost';
@@ -10,16 +10,17 @@ export interface ButtonProps
   size?: ButtonSize;
   hasArrow?: boolean;
   icon?: ReactNode;
+  children?: ReactNode
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
   variant = 'primary',
   size = 'md',
   hasArrow = false,
   icon,
   children,
   ...props
-}) => {
+}: ButtonProps) => {
   const baseStyles =
     'inline-flex items-center rounded-lg border border-transparent font-semibold';
 
@@ -41,10 +42,12 @@ export const Button: React.FC<ButtonProps> = ({
   const buttonStyles = `${baseStyles} ${sizeStyles[size]} ${colorStyles[variant]}`;
 
   return (
+    <>
     <button type="button" className={buttonStyles} {...props}>
       {icon && <span className="mr-2">{icon}</span>}
       {children}
       {hasArrow && <span className="ml-2">→</span>}
     </button>
+    </>
   );
 };

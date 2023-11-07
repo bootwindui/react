@@ -11,23 +11,22 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && tsdx watch",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "build": "pnpm run -r --filter packages/* build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint ./**/*.ts --fix",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-    "build-storybook": "set NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_f2040c498eb8da3"
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "release": "bumpp package.json packages/*/package.json --tag --commit --push && pnpm -r publish --access public"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "npm run lint"
     }
   },
   "prettier": {
@@ -52,35 +51,46 @@
     }
   ],
   "devDependencies": {
-    "@babel/core": "^7.21.3",
     "@size-limit/preset-small-lib": "^8.2.4",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-essentials": "^7.6.0-alpha.4",
+    "@storybook/addon-interactions": "^7.6.0-alpha.4",
+    "@storybook/addon-links": "^7.6.0-alpha.4",
+    "@storybook/addon-mdx-gfm": "^7.6.0-alpha.4",
+    "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addons": "^6.5.16",
-    "@storybook/react": "^6.5.16",
-    "@types/react-dom": "^18.0.11",
+    "@storybook/blocks": "^7.6.0-alpha.4",
+    "@storybook/react": "^7.6.0-alpha.4",
+    "@storybook/react-vite": "^7.6.0-alpha.4",
+    "@storybook/test": "^7.6.0-alpha.4",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
     "autoprefixer": "^10.4.14",
-    "babel-loader": "^9.1.2",
-    "chromatic": "^7.6.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-is": "^18.2.0",
     "rollup-plugin-postcss": "^4.0.2",
     "size-limit": "^8.2.4",
+    "storybook": "^7.0.26",
     "tailwindcss": "^3.3.0",
-    "tsdx": "^0.14.1",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.1"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/forms": "^0.5.6"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "tailwind-typescript-components@0.1.0"
+  "_id": "tailwind-typescript-components@0.1.0",
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  }
 }

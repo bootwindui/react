@@ -1,6 +1,6 @@
 import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
-import Toggle, { ToggleProps } from '../src/components/Toggle';
+import { Meta } from '@storybook/react';
+import Toggle, { ToggleProps } from '../src/index';
 
 import { FaMoon, FaSun } from 'react-icons/fa6';
 

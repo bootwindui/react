@@ -1,36 +1,26 @@
+# .github/workflows/chromatic.yml
+
 # Workflow name
-name: 'Chromatic Deployment'
+name: 'Chromatic'
 
 # Event for the workflow
 on: push
 
 # List of jobs
 jobs:
-  test:
+  chromatic-deployment:
     # Operating System
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
+        run: yarn
+        # 👇 Adds Chromatic as a step in the workflow
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
         with:
-          fetch-depth: 0
-
-      #👇 Set NODE_OPTIONS before running 'yarn'
-      - name: Set NODE_OPTIONS
-        run: echo 'export NODE_OPTIONS=--openssl-legacy-provider' >> $GITHUB_ENV
-
-      #👇 Setup Node.js version 16
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-
-      - run: yarn
-
-      #👇 Adds Chromatic as a step in the workflow
-      - uses: chromaui/action@v1
-        # Options required for Chromatic's GitHub Action
-        with:
-          #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}

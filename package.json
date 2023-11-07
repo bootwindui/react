@@ -18,7 +18,8 @@
     "analyze": "size-limit --why",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "bumpp package.json packages/*/package.json --tag --commit --push && pnpm -r publish --access public"
+    "release": "bumpp package.json packages/*/package.json --tag --commit --push && pnpm -r publish --access public",
+    "chromatic": "npx chromatic --project-token=chpt_e35bebc62f7a79c"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -52,9 +53,9 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.2.4",
+    "@storybook/addon-controls": "^7.5.3",
     "@storybook/addon-essentials": "^7.6.0-alpha.4",
     "@storybook/addon-interactions": "^7.6.0-alpha.4",
-    "@storybook/addon-controls": "^7.5.3",
     "@storybook/addon-links": "^7.6.0-alpha.4",
     "@storybook/addon-mdx-gfm": "^7.6.0-alpha.4",
     "@storybook/addon-onboarding": "^1.0.8",
@@ -69,6 +70,7 @@
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "autoprefixer": "^10.4.14",
+    "chromatic": "^7.6.0",
     "eslint": "^8.45.0",
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",

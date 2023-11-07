@@ -14,12 +14,12 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
-       - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2
         with:
           version: 8.7.6
       - name: Install dependencies
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
-       run: pnpm i
+        run: pnpm i
         # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@v1

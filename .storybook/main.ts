@@ -4,6 +4,7 @@ const config: StorybookConfig = {
   stories: ['../src/**/*.mdx',"../packages/**/*.stories.tsx"],
   addons: [
     '@storybook/addon-links',
+    '@storybook/addon-controls',
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',

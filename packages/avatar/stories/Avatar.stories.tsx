@@ -7,19 +7,15 @@ export default {
   component: Avatar,
   argTypes: {
     rounded: {
-      control: {
-        type: 'radio',
-        options: ['none', 'sm', 'md', 'lg', 'full'],
-      },
+      options: ['none', 'sm', 'md', 'lg', 'full'],
+      control: { type: 'radio' },
     },
     notificationDot: {
-      control: {
-        type: 'radio',
-        options: [null, 'gray', 'red', 'green'],
-      },
+      options: [null, 'gray', 'red', 'green'],
+      control: { type: 'radio' },
     },
     showPlaceholder: {
-      control: 'boolean', // Tambahkan properti showPlaceholder
+      control: 'boolean',
     },
   },
 } as Meta;
@@ -36,6 +32,6 @@ export const Avatars = (args: AvatarProps) => (
       {...args}
       alt="User 2"
     />
-    <Avatar showPlaceholder={true} {...args} alt="User 2"  />
+    <Avatar showPlaceholder={true} {...args} alt="User 2" />
   </div>
 );

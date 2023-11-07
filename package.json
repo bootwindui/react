@@ -54,6 +54,7 @@
     "@size-limit/preset-small-lib": "^8.2.4",
     "@storybook/addon-essentials": "^7.6.0-alpha.4",
     "@storybook/addon-interactions": "^7.6.0-alpha.4",
+    "@storybook/addon-controls": "^7.5.3",
     "@storybook/addon-links": "^7.6.0-alpha.4",
     "@storybook/addon-mdx-gfm": "^7.6.0-alpha.4",
     "@storybook/addon-onboarding": "^1.0.8",

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import Checkbox, { CheckboxProps } from '../src/index';
+import Checkbox, { CheckboxProps } from '../src/checkbox/index';
 
 export default {
-  title: 'Components/Checkbox',
+  title: 'Forms/Checkbox',
   component: Checkbox,
   argTypes: {
     isRounded: { control: 'boolean' },

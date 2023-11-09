@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import Toggle, { ToggleProps } from '../src/index';
+import Toggle, { ToggleProps } from '../src/toggle';
 
 import { FaMoon, FaSun } from 'react-icons/fa6';
 
 export default {
-  title: 'Components/Toggle',
+  title: 'Components/Forms/Toggle',
   component: Toggle,
   argTypes: {
     enabled: { control: 'boolean' },

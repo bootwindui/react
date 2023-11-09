@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react';
 import Text, { TextProps } from '../src/text';
 
 export default {
-  title: 'Typography/Text',
+  title: 'Components/Typography/Text',
   component: Text,
   argTypes: {
     

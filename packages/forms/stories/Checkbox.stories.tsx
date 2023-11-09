@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 import Checkbox, { CheckboxProps } from '../src/checkbox/index';
 
 export default {
-  title: 'Forms/Checkbox',
+  title: 'Components/Forms/Checkbox',
   component: Checkbox,
   argTypes: {
     isRounded: { control: 'boolean' },

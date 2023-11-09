@@ -1,17 +1,65 @@
+import React from 'react';
 import { Meta } from '@storybook/react';
 import Text, { TextProps } from '../src/text';
 
 export default {
   title: 'Components/Typography/Text',
   component: Text,
+  args: {
+    children: 'Hello World!',
+    size: 1,
+    type: 'headline',
+    weight: 'font-light'
+  },
   argTypes: {
-    
+    type: {
+      description: "Size of the text",
+      control: {
+        type: 'select'
+      },
+      options: [
+        'short-desc',
+        'paragraph',
+        'headline',
+        'display',
+      ],
+      name: "Size"
+    },
+    children: {
+      name: "Content",
+      control: {
+        type: 'text',
+      }
+    },
+    size: {
+      name: "Size",
+      control: {
+        type: 'number'
+      }
+    },
+    weight: {
+      name: "Font Weight",
+      control: {
+        type: 'select'
+      },
+      options: [
+        "font-thin", "font-extralight", "font-light", "font-normal", "font-medium", "font-semibold", "font-bold", "font-extrabold", "font-black"
+      ]
+    },
+    color: {
+      name: "Color",
+      description: "Using Tailwind colors",
+      control: {
+        type: 'text'
+      },
+    },
   },
 } as Meta;
 
 export const Sizes = (args: TextProps) => (
   <div>
-
+    <Text type={args.type} color={args.color} size={args.size} weight={args.weight}>{args.children}</Text>
+    
   {[...Array(6)].map((_, i) => (
       <div className='mb-12'>
         <Text type='paragraph' size={i+1} weight='font-bold'>Paragraph: {i+1} / Bold</Text>

@@ -149,6 +149,18 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
 
+  packages/breadcrumbs:
+    dependencies:
+      '@types/react':
+        specifier: ^18.2.15
+        version: 18.2.36
+      '@types/react-dom':
+        specifier: ^18.2.14
+        version: 18.2.14
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+
   packages/button:
     dependencies:
       '@types/react':
@@ -161,7 +173,7 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
 
-  packages/checkbox:
+  packages/core:
     dependencies:
       '@types/react':
         specifier: ^18.2.15
@@ -185,7 +197,7 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
 
-  packages/toggle:
+  packages/typography:
     dependencies:
       '@types/react':
         specifier: ^18.2.15

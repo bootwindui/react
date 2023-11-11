@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { GoInfo, GoXCircle, GoCheckCircle } from 'react-icons/go';
 
 interface AlertProps {
   type: 'warning' | 'danger' | 'success' | 'info';
-  title: string;
-  description?: string | React.ReactNode;
+  icon?: boolean | ReactNode
+  title?: string;
+  description?: string | ReactNode;
   actions?: React.ReactNode;
   link?: {
     url: string;
@@ -47,6 +48,7 @@ const classes = {
 const Alert: React.FC<AlertProps> = ({
   type,
   title,
+  icon,
   description,
   actions,
   link,
@@ -55,6 +57,11 @@ const Alert: React.FC<AlertProps> = ({
   const [isDismissed, setIsDismissed] = useState(false);
 
   const getIcon = () => {
+    // Use the provided ReactNode icon in props if exists
+    if (React.isValidElement(icon)) {
+      return icon
+    }
+
     switch (type) {
       case 'warning':
         return (
@@ -91,16 +98,26 @@ const Alert: React.FC<AlertProps> = ({
       className={`rounded-md p-4 ${classes[type].bg}`}
     >
       <div className="flex flex-col md:flex-row">
-        <div className="flex-shrink-0">{getIcon()}</div>
-        <div className="ml-3 flex-1">
-          <h3
-            className={`text-sm font-medium ${classes[type].text}`}
-          >
-            {title}
-          </h3>
+        {icon && (
+          <div className="flex-shrink-0 mr-3">{getIcon()}</div>
+        )}
+        <div className="flex-1">
+          
+          {title && (
+            <h3
+              className={`text-sm font-medium ${classes[type].text}`}
+            >
+              {title}
+            </h3>
+          )}
+
+          {/* Create gap between title and desc */}
+          {title && description && <div className='mb-2'></div>}
+
+
           {description && (
             <div
-              className={`mt-2 text-sm ${classes[type].description}`}
+              className={`text-sm ${classes[type].description}`}
             >
               {typeof description === 'string' ? (
                 <p>{description}</p>

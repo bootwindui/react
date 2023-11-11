@@ -3,7 +3,7 @@ import { Meta } from '@storybook/react';
 import Alert from '../src/index';
 
 export default {
-  title: 'Components/Alert',
+  title: 'Components/Alert/Variants',
   component: Alert,
   argTypes: {},
 } as Meta;

@@ -18,7 +18,7 @@ export const Warning = () => (
 
 export const Error = () => (
   <Alert
-    type="error"
+    type="danger"
     title="There were 2 errors with your submission"
     description={
       <ul role="list" className="list-disc space-y-1 pl-5">

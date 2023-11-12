@@ -38,6 +38,46 @@ export const LabelAndHelperText = (args: ToggleProps) => (
     </div>
     </>
 )
+export const Variants = (args: ToggleProps) => (
+    <>
+    <div className="mb-10">
+        <Text type='paragraph' size={2}>Default</Text>
+        <Input placeholder='ari@bootwind.com' label='Email' description={
+          <>
+          <HiOutlineQuestionMarkCircle className='w-4 h-4'/>
+          Helping text for user
+          </>
+        }></Input>
+    </div>
+    <div className="mb-10">
+        <Text type='paragraph' size={2}>Danger</Text>
+        <Input variant='danger' placeholder='ari@bootwind.com' label='Email' description={
+          <>
+          <HiOutlineQuestionMarkCircle className='w-4 h-4'/>
+          Helping text for user
+          </>
+        }></Input>
+    </div>
+    <div className="mb-10">
+        <Text type='paragraph' size={2}>Warning</Text>
+        <Input variant='warning' placeholder='ari@bootwind.com' label='Email' description={
+          <>
+          <HiOutlineQuestionMarkCircle className='w-4 h-4'/>
+          Helping text for user
+          </>
+        }></Input>
+    </div>
+    <div className="mb-10">
+        <Text type='paragraph' size={2}>Success</Text>
+        <Input variant='success' placeholder='ari@bootwind.com' label='Email' description={
+          <>
+          <HiOutlineQuestionMarkCircle className='w-4 h-4'/>
+          Helping text for user
+          </>
+        }></Input>
+    </div>
+    </>
+)
 export const InputGroup = (args: ToggleProps) => (
     <>
     </>

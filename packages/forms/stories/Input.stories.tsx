@@ -2,7 +2,7 @@ import React from 'react';
 import { Meta } from '@storybook/react';
 import Toggle, { ToggleProps } from '../src/toggle';
 
-import { FaMoon, FaSun } from 'react-icons/fa6';
+import { HiOutlineQuestionMarkCircle } from 'react-icons/hi2';
 import Text from '../../typography/src/text';
 import Input from '../src/input';
 
@@ -19,6 +19,23 @@ export const BasicInput = (args: ToggleProps) => (
         <Text type='headline' size={6}>Basic Input</Text>
         <Input placeholder='ari@bootwind.com'></Input>
         <Input placeholder='Disabled input' disabled></Input>
+    </>
+)
+export const LabelAndHelperText = (args: ToggleProps) => (
+    <>
+    <div className="mb-10">
+        <Text type='headline' size={6}>Input with Label</Text>
+        <Input placeholder='ari@bootwind.com' label='Email'></Input>
+    </div>
+    <div className="mb-10">
+        <Text type='headline' size={6}>Input with Description</Text>
+        <Input placeholder='ari@bootwind.com' label='Email' description={
+          <>
+          <HiOutlineQuestionMarkCircle className='w-4 h-4'/>
+          Helping text for user
+          </>
+        }></Input>
+    </div>
     </>
 )
 export const InputGroup = (args: ToggleProps) => (

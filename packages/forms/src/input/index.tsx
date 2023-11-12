@@ -9,7 +9,7 @@ export interface InputProps {
   label?: string
   placeholder?: string
   disabled?: boolean,
-  description?: string
+  description?: string | ReactNode
   leftSection?: string | ReactNode
   rightSection?: string | ReactNode
 }
@@ -39,9 +39,11 @@ const Input: React.FC<InputProps> = ({
                         `
   return (
     <div className="input-group mb-3">
-      <label htmlFor={id}>{label}</label>
+      <div className='bootwind-label mb-2'>
+        <label className='text-neutral-600 leading-tight font-medium' htmlFor={id}>{label}</label>
+      </div>
       <input type={type} placeholder={placeholder} name={name} className={inputClasses} disabled={disabled}/>
-      <span>{description}</span>
+      <span className='text-zinc-500 flex gap-2 items-center text-sm mt-2'>{description}</span>
     </div>
   );
 };

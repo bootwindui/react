@@ -126,10 +126,10 @@ const Pagination: React.FC<PaginationProps> = ({
               disabled={isFirstPage}
               className={`${
                 isFirstPage ? 'opacity-50 cursor-not-allowed' : ''
-              } inline-flex items-center border-t-2 border-transparent pt-4 pr-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700`}
+              } inline-flex items-center rounded-lg border border-gray-300 mt-4 py-1.5 px-4 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-900`}
             >
               <HiArrowLeft
-                className="mr-3 h-5 w-5 text-gray-400"
+                className="mr-3 h-4 w-4 text-gray-700"
                 aria-hidden="true"
               />
               Previous
@@ -141,9 +141,9 @@ const Pagination: React.FC<PaginationProps> = ({
                 key={index}
                 type="button"
                 onClick={() => onPageClick(index + 1)}
-                className={`inline-flex items-center border-t-2 border-transparent px-4 pt-4 text-sm font-medium ${
+                className={`inline-flex items-center border-t-2 border-transparent px-4 mt-4 text-sm font-medium ${
                   currentPage === index + 1
-                    ? 'border-indigo-500 text-indigo-600'
+                    ? 'bg-indigo-500 text-white px-3 py-2 rounded-lg'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                 }`}
               >
@@ -158,11 +158,11 @@ const Pagination: React.FC<PaginationProps> = ({
               onClick={onNextClick}
               className={`${
                 isLastPage ? 'opacity-50 cursor-not-allowed' : ''
-              } inline-flex items-center border-t-2 border-transparent pt-4 pr-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700`}
+              } inline-flex items-center rounded-lg border border-gray-300 mt-4 py-1.5 px-4 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-900`}
             >
               Next
               <HiArrowRight
-                className="ml-3 h-5 w-5 text-gray-400"
+                className="ml-3 h-4 w-4 text-gray-700"
                 aria-hidden="true"
               />
             </button>
@@ -192,6 +192,10 @@ const Pagination: React.FC<PaginationProps> = ({
                 isFirstPage ? 'opacity-50 cursor-not-allowed' : ''
               } relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-20`}
             >
+              <HiArrowLeft
+                className="mr-3 h-4 w-4 text-gray-700"
+                aria-hidden="true"
+              />
               Previous
             </button>
             <button
@@ -203,6 +207,10 @@ const Pagination: React.FC<PaginationProps> = ({
               } relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-20`}
             >
               Next
+              <HiArrowRight
+                className="ml-3 h-4 w-4 text-gray-700"
+                aria-hidden="true"
+              />
             </button>
           </div>
         </nav>

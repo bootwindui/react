@@ -55,13 +55,29 @@ const Input: React.FC<InputProps> = ({
                         disabled:bg-neutral-100
                         disabled:cursor-not-allowed
                         ${classes.input}
+                        ${leftSection ? 'pl-14' : ''}
+                        ${rightSection ? 'pr-14' : ''}
                         `
   return (
     <div className="input-group mb-3">
-      <div className='bootwind-label mb-2'>
-        <label className='text-neutral-600 leading-tight font-medium' htmlFor={id}>{label}</label>
+      { label && (
+        <div className='bootwind-label mb-2'>
+          <label className='text-neutral-600 leading-tight font-medium' htmlFor={id}>{label}</label>
+        </div>
+      )}
+      <div className={`input-area relative inline-block ${leftSection ? 'has-left-section' : ''} ${rightSection  ? 'has-right-section' : ''}`}>
+        {leftSection && (
+          <label htmlFor={id} className="input-left-section absolute items-center left-0 top-0 flex justify-center h-full w-14">
+            { leftSection }
+          </label>
+        )}
+        <input type={type} placeholder={placeholder} id={id} name={name} className={inputClasses} disabled={disabled}/>
+        {rightSection && (
+          <label htmlFor={id} className="input-right-section absolute items-center right-0 top-0 flex justify-center h-full w-14">
+            { rightSection }
+          </label>
+        )}
       </div>
-      <input type={type} placeholder={placeholder} name={name} className={inputClasses} disabled={disabled}/>
       <span className={`${classes.description} flex gap-2 items-center text-sm mt-2`}>{description}</span>
     </div>
   );

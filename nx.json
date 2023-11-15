@@ -22,6 +22,9 @@
     "@nx/vite:test": {
       "cache": true,
       "inputs": ["default", "^default"]
+    },
+    "build-storybook": {
+      "cache": true
     }
   },
   "affected": {
@@ -35,6 +38,13 @@
       },
       "library": {
         "unitTestRunner": "vitest"
+      }
+    }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": ["build-storybook"]
       }
     }
   }

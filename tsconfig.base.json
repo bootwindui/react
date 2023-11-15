@@ -7,7 +7,8 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "paths": {
-      "card": ["packages/card/src/index.ts"]
+      "@bootwind/ui": ["./packages/ui/src/index.ts"],
+      "ui": ["packages/ui/src/index.ts"]
     }
   }
 }

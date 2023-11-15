@@ -5,48 +5,23 @@ export interface BadgeProps {
   size?: 'small' | 'large';
   withIcon?: ReactNode;
   withDot?: boolean;
-  children: string;
 }
 
-interface DotSvgProps {
-  variant: BadgeProps['variant'];
-}
-
-const DotSvg: React.FC<DotSvgProps> = ({ variant }) => {
-  const getTextColor = () => {
-    switch (variant) {
-      case 'primary':
-        return ' text-[#4A72FF]';
-      case 'neutral':
-        return 'text-[#5E718D]';
-      case 'warning':
-        return 'text-[#D8A800]';
-      case 'success':
-        return 'text-[#11A75C]';
-      case 'error':
-        return 'text-[#FF3838]';
-      default:
-        return 'text-[#4A72FF]';
-    }
-  };
-
-  return (
-    <svg
-      className={`-ml-0.5 mr-1.5 h-2 w-2 ${getTextColor()}`}
-      fill="currentColor"
-      viewBox="0 0 8 8"
-    >
-      <circle cx={4} cy={4} r={3} />
-    </svg>
-  );
-};
+const DotSvg = () => (
+  <svg
+    className="-ml-0.5 mr-1.5 h-2 w-2 text-white"
+    fill="currentColor"
+    viewBox="0 0 8 8"
+  >
+    <circle cx={4} cy={4} r={3} />
+  </svg>
+);
 
 const Badge: React.FC<BadgeProps> = ({
   variant,
   size = 'small',
   withIcon = null,
   withDot = false,
-  children,
 }) => {
   const baseClasses = `inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium`;
 
@@ -54,9 +29,13 @@ const Badge: React.FC<BadgeProps> = ({
 
   const badgeContent = (
     <>
-      {withDot && <DotSvg variant={variant} />}
-      {withIcon && <span className="mr-1.5">{withIcon}</span>}
-      {children}
+      {withDot && (
+        <span className="mr-1.5">
+          <DotSvg />
+        </span>
+      )}
+      {withIcon && <span className="mr-0.5">{withIcon}</span>}
+      Badge
     </>
   );
 

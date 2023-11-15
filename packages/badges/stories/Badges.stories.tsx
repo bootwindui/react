@@ -1,7 +1,7 @@
-// Badge.stories.tsx
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Badge, { BadgeProps } from '../src/index';
+import { FaRegEnvelope } from 'react-icons/fa6'; // Import ikon dari react-icons atau dari sumber lain
 
 export default {
   title: 'Components/Badge',
@@ -22,7 +22,15 @@ export default {
   },
 } as Meta;
 
-const Template: Story<BadgeProps> = args => <Badge {...args} />;
+const Template: Story<BadgeProps> = args => <Badge {...args}> test </Badge>;
+
+export const BasicBadge = () => (
+  <>
+    <Badge variant="warning" withIcon={<FaRegEnvelope />}>
+      test cik
+    </Badge>
+  </>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {

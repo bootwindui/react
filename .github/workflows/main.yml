@@ -2,9 +2,7 @@
 name: 'Storybook'
 
 on: 
-  push: 
-    branches:
-      - main
+  push:
 
 permissions:
   contents: write

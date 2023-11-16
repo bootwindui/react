@@ -1,0 +1,13 @@
+import{j as h,a as e}from"./jsx-runtime-03b4ddbf.js";import{r as k}from"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";const C=({id:a,label:x,isRounded:b=!1,indeterminate:d=!1})=>{const[p,f]=k.useState(d?!1:void 0);return h("div",{className:"flex items-center",children:[e("input",{id:a,name:a,type:"checkbox",className:b?"h-4 w-4 rounded-full border-primary text-primary focus:ring-primary":"h-4 w-4 rounded border-primary text-primary focus:ring-primary",checked:p,onChange:()=>{f(r=>{if(r!==!1)return!r})},ref:r=>{r&&(r.indeterminate=d)}}),e("label",{htmlFor:a,className:"ml-2",children:x})]})},s=C;try{checkbox.displayName="checkbox",checkbox.__docgenInfo={description:"",displayName:"checkbox",props:{id:{defaultValue:null,description:"",name:"id",required:!0,type:{name:"string"}},label:{defaultValue:null,description:"",name:"label",required:!0,type:{name:"string"}},isRounded:{defaultValue:{value:"false"},description:"",name:"isRounded",required:!1,type:{name:"boolean"}},indeterminate:{defaultValue:{value:"false"},description:"",name:"indeterminate",required:!1,type:{name:"boolean"}}}}}catch{}const N={title:"Components/Forms/Checkbox",component:s,argTypes:{isRounded:{control:"boolean"},indeterminate:{control:"boolean"}}},o=a=>h("div",{className:"flex flex-col space-y-4",children:[e("div",{children:e(s,{id:"roundedCheckbox",label:"Rounded Checkbox",isRounded:!0})}),e("div",{children:e(s,{id:"squareCheckbox",label:"Square Checkbox",isRounded:!1})})]}),n=a=>e("div",{className:"flex flex-col space-y-4",children:e("div",{children:e(s,{isRounded:!1,id:"indeterminateCheckbox",label:"Indeterminate Checkbox",indeterminate:!0})})});var t,c,i;o.parameters={...o.parameters,docs:{...(t=o.parameters)==null?void 0:t.docs,source:{originalSource:`(args: CheckboxProps) => <div className="flex flex-col space-y-4">
+    <div>
+      <Checkbox id="roundedCheckbox" label="Rounded Checkbox" isRounded={true} />
+    </div>
+    <div>
+      <Checkbox id="squareCheckbox" label="Square Checkbox" isRounded={false} />
+    </div>
+  </div>`,...(i=(c=o.parameters)==null?void 0:c.docs)==null?void 0:i.source}}};var l,m,u;n.parameters={...n.parameters,docs:{...(l=n.parameters)==null?void 0:l.docs,source:{originalSource:`(args: CheckboxProps) => <div className="flex flex-col space-y-4">
+    <div>
+      <Checkbox isRounded={false} id="indeterminateCheckbox" label="Indeterminate Checkbox" indeterminate={true} />
+    </div>
+  </div>`,...(u=(m=n.parameters)==null?void 0:m.docs)==null?void 0:u.source}}};const S=["Variants","IndeterminateState"];export{n as IndeterminateState,o as Variants,S as __namedExportsOrder,N as default};
+//# sourceMappingURL=Checkbox.stories-475ee1b5.js.map

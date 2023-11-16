@@ -19,9 +19,6 @@ jobs:
         run: pnpm install --frozen-lockfile=false 
       - name: Build
         run: pnpm dlx nx run ui:build-storybook
-      - name: Install rsync 📚
-        run: |
-          apt-get update && apt-get install -y rsync
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@v4
         with:

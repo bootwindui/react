@@ -1,0 +1,14 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "paths": {
+      "@bootwind/card": ["./packages/card/src/index.ts"],
+      "@bootwind/ui": ["./packages/ui/src/index.ts"]
+    }
+  }
+}

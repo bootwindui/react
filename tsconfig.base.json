@@ -8,7 +8,6 @@
     "skipLibCheck": true,
     "paths": {
       "@bootwind/ui": ["./packages/ui/src/index.ts"],
-      "ui": ["packages/ui/src/index.ts"]
     }
   }
 }

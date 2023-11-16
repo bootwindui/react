@@ -6,3 +6,5 @@ dist
 
 
 .nx/cache
+packages/*/.storybook
+packages/*/tsconfig.storybook.json

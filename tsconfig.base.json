@@ -8,7 +8,8 @@
     "skipLibCheck": true,
     "paths": {
       "@bootwind/card": ["./packages/card/src/index.ts"],
-      "@bootwind/ui": ["./packages/ui/src/index.ts"]
+      "@bootwind/ui": ["./packages/ui/src/index.ts"],
+      "@bootwind/common": ["packages/common/src/index.ts"]
     }
   }
 }

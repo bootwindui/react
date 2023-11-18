@@ -1,5 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
+
+import Title from '../../title/src/index';
 import Badge, { BadgeProps } from '../src/index';
 import { FaRegEnvelope } from 'react-icons/fa6'; // Import ikon dari react-icons atau dari sumber lain
 
@@ -22,15 +24,12 @@ export default {
   },
 } as Meta;
 
-const Template: Story<BadgeProps> = args => <Badge {...args}> test </Badge>;
-
-export const BasicBadge = () => (
-  <>
-    <Badge variant="warning" withIcon={<FaRegEnvelope />}>
-      test cik
-    </Badge>
-  </>
-);
+const Template: Story<BadgeProps> = args => <>
+  <Title
+    title="Badge"
+    description="The Badge component in the Bootwind Design System is a versatile element that allows you to highlight and label content effectively. Customize the badge's appearance, size, and color to draw attention to specific information, notifications, or status indicators, enhancing the overall clarity and engagement of your interface."
+  />
+  <Badge {...args}> Badge </Badge></>;
 
 export const Primary = Template.bind({});
 Primary.args = {

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
+
+import Title from '../../title/src/index';
 import Alert from '../src/index';
 
 export default {
@@ -10,6 +12,12 @@ export default {
 
 export const WithTitle = () => (
   <>
+
+    <Title
+      title="Alerts"
+      description="The Alerts component in the Bootwind Design System enables you to convey important messages or notifications to users with clarity and style. Customize the alert's appearance, type, and content to effectively communicate information, warnings, or updates, ensuring a seamless and informative user experience in your interface."
+    />
+
     <div className="mb-5">
       <Alert
         type="info"
@@ -36,6 +44,11 @@ export const WithTitle = () => (
 
 export const WithoutTitle = () => (
   <>
+    <Title
+      title="Alerts"
+      description="The Alerts component in the Bootwind Design System enables you to convey important messages or notifications to users with clarity and style. Customize the alert's appearance, type, and content to effectively communicate information, warnings, or updates, ensuring a seamless and informative user experience in your interface."
+    />
+
     <div className="mb-5">
       <Alert
         type="success"
@@ -64,6 +77,11 @@ export const WithoutTitle = () => (
 );
 export const DismissLink = () => (
   <>
+    <Title
+      title="Alerts"
+      description="The Alerts component in the Bootwind Design System enables you to convey important messages or notifications to users with clarity and style. Customize the alert's appearance, type, and content to effectively communicate information, warnings, or updates, ensuring a seamless and informative user experience in your interface."
+    />
+
     <div className="mb-5">
       <Alert
         type="success"
@@ -97,6 +115,11 @@ export const DismissLink = () => (
 
 export const WithIcon = () => (
   <>
+    <Title
+      title="Alerts"
+      description="The Alerts component in the Bootwind Design System enables you to convey important messages or notifications to users with clarity and style. Customize the alert's appearance, type, and content to effectively communicate information, warnings, or updates, ensuring a seamless and informative user experience in your interface."
+    />
+
     <div className="mb-5">
       <Alert
         icon={true}

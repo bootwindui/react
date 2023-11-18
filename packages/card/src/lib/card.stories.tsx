@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import Title from '../../../title/src/index';
 import { Card, CardProps } from './card';
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
@@ -13,6 +14,12 @@ type Story = StoryObj<typeof Card>;
 export const Basic = (args: CardProps) => {
   return (
     <>
+
+      <Title
+        title="Cards"
+        description="The Foundation Cards component in the Bootwind Design System offers a versatile way to structure and present content in a visually appealing manner. Customize card styles, sizes, and content to effectively highlight and organize information within your interface. Whether you're showcasing products, articles, or user profiles, the Foundation Cards component enhances the presentation and user engagement with your content, providing a cohesive and aesthetic design foundation for your application or website."
+      />
+
       <div className="grid grid-cols-3">
         <Card
           cardTitle="Daily Visits"

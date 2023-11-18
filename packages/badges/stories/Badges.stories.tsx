@@ -76,3 +76,22 @@ WithDotAndIcon.args = {
   withDot: true,
   withIcon: <span>🔔</span>,
 };
+export const AllBadges = () => (
+  <>
+    <Badge variant="warning" withIcon={<FaRegEnvelope />}>
+      Warning
+    </Badge>
+    <Badge variant="primary" withIcon={<FaRegEnvelope />}>
+      Primary
+    </Badge>
+    <Badge variant="error" withIcon={<FaRegEnvelope />}>
+      Danger
+    </Badge>
+    <Badge variant="neutral" withIcon={<FaRegEnvelope />}>
+      Neutral
+    </Badge>
+    <Badge variant="success" withIcon={<FaRegEnvelope />}>
+      Success
+    </Badge>
+  </>
+);

@@ -1,5 +1,5 @@
 {
-  "name": "card",
+  "name": "@bootwind/card",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/card/src",
   "projectType": "library",

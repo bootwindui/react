@@ -1,15 +1,26 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": ".",
     "moduleResolution": "bundler",
     "target": "ES2020",
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "paths": {
+      "@bootwind/alert": ["./packages/alert/src/index.ts"],
+      "@bootwind/avatar": ["packages/avatar/src/index.ts"],
+      "@bootwind/badges": ["packages/badges/src/index.ts"],
+      "@bootwind/breadcrumb": ["packages/breadcrumb/src/index.ts"],
+      "@bootwind/button": ["packages/button/src/index.ts"],
       "@bootwind/card": ["./packages/card/src/index.ts"],
+      "@bootwind/common": ["./packages/common/src/index.ts"],
+      "@bootwind/core": ["packages/core/src/index.ts"],
+      "@bootwind/forms": ["packages/forms/src/index.ts"],
+      "@bootwind/title": ["./packages/title/src/index.ts"],
+      "@bootwind/typography": ["packages/typography/src/index.ts"],
       "@bootwind/ui": ["./packages/ui/src/index.ts"],
-      "@bootwind/common": ["packages/common/src/index.ts"]
+      "pagination": ["packages/pagination/src/index.ts"]
     }
   }
 }

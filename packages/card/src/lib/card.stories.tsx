@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Title from '../../../title/src/index';
+import Title from '@bootwind/title';
 import { Card, CardProps } from './card';
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';

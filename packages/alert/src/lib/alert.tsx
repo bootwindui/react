@@ -1,8 +1,8 @@
 import React, { ReactNode, useState } from 'react';
 import { GoInfo, GoXCircle, GoCheckCircle } from 'react-icons/go';
 
-interface AlertProps {
-  type: 'warning' | 'danger' | 'success' | 'info';
+export interface AlertProps {
+  variant: 'warning' | 'error' | 'success' | 'info';
   icon?: boolean | ReactNode
   title?: string;
   description?: string | ReactNode;
@@ -29,7 +29,7 @@ const classes = {
     link: 'text-green-700 hover:text-green-600',
     dismissBtn: 'bg-green-50 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-50',
   },
-  danger: {
+  error: {
     bg: 'bg-red-50',
     text: 'text-red-800',
     description: 'text-red-700',
@@ -45,8 +45,8 @@ const classes = {
   },
 }
 
-const Alert: React.FC<AlertProps> = ({
-  type,
+export const Alert: React.FC<AlertProps> = ({
+  variant,
   title,
   icon,
   description,
@@ -62,12 +62,12 @@ const Alert: React.FC<AlertProps> = ({
       return icon
     }
 
-    switch (type) {
+    switch (variant) {
       case 'warning':
         return (
           <GoInfo className="h-5 w-5 text-yellow-400" aria-hidden="true" />
         );
-      case 'danger':
+      case 'error':
         return (
           <GoXCircle className="h-5 w-5 text-red-400" aria-hidden="true" />
         );
@@ -95,7 +95,7 @@ const Alert: React.FC<AlertProps> = ({
 
   return (
     <div
-      className={`rounded-md p-4 ${classes[type].bg}`}
+      className={`rounded-md p-4 ${classes[variant].bg}`}
     >
       <div className="flex flex-col md:flex-row">
         {icon && (
@@ -105,7 +105,7 @@ const Alert: React.FC<AlertProps> = ({
           
           {title && (
             <h3
-              className={`text-sm font-medium ${classes[type].text}`}
+              className={`text-sm font-medium ${classes[variant].text}`}
             >
               {title}
             </h3>
@@ -117,7 +117,7 @@ const Alert: React.FC<AlertProps> = ({
 
           {description && (
             <div
-              className={`text-sm ${classes[type].description}`}
+              className={`text-sm ${classes[variant].description}`}
             >
               {typeof description === 'string' ? (
                 <p>{description}</p>
@@ -132,7 +132,7 @@ const Alert: React.FC<AlertProps> = ({
           <p className="mt-3 text-sm md:mt-0 md:ml-3">
             <a
               href={link.url}
-              className={`whitespace-nowrap font-medium ${classes[type].link}`}
+              className={`whitespace-nowrap font-medium ${classes[variant].link}`}
             >
               {link.text}
               <span aria-hidden="true"> &rarr;</span>
@@ -145,7 +145,7 @@ const Alert: React.FC<AlertProps> = ({
               <button
                 type="button"
                 onClick={handleDismiss}
-                className={`inline-flex rounded-md p-1.5 ${classes[type].dismissBtn}`}
+                className={`inline-flex rounded-md p-1.5 ${classes[variant].dismissBtn}`}
               >
                 <span className="sr-only">Dismiss</span>
                 <GoXCircle className="h-5 w-5" aria-hidden="true" />

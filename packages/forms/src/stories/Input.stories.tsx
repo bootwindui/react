@@ -1,56 +1,98 @@
 import React from 'react';
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { HiOutlineQuestionMarkCircle, HiOutlineCreditCard } from 'react-icons/hi2';
 
 import Title from '@bootwind/title';
 import { Text } from '@bootwind/typography';
-import { Input, Toggle, type ToggleProps } from '../index';
+import { Input, InputProps, type ToggleProps } from '../index';
 
 export default {
   title: 'Components/Forms/Input',
-  component: Toggle,
+  tags: ['autodocs'],
+  component: Input,
+  args: {
+    rightSection: <HiOutlineCreditCard></HiOutlineCreditCard>,
+    placeholder:'ari@bootwind.com',
+    label:'Email',
+    description: (
+      <>
+        <HiOutlineQuestionMarkCircle className='w-4 h-4' />
+        Helping text for user
+      </>
+    )
+  },
   argTypes: {
-    enabled: { control: 'boolean' },
+    id: {
+      type: 'string',
+      control: {
+        type: 'text'
+      }
+    },
+    type: {
+      type: 'string',
+      control: {
+        type: 'text'
+      }
+    },
+    name: {
+      type: 'string',
+      control: {
+        type: 'text'
+      }
+    },
+    variant: {
+      type: 'string',
+      options: ["default", "error", "warning", "success"],
+      defaultValue: 'default',
+      control: {
+        type: 'select'
+      }
+    },
+    label: {
+      type: 'string',
+      control: {
+        type: 'text'
+      }
+    },
+    placeholder: {
+      type: 'string',
+      control: {
+        type: 'text'
+      }
+    },
+    disabled: {
+      type: 'boolean',
+      defaultValue: false,
+      control: {
+        type: 'boolean'
+      }
+    },
+    description: {
+      control: {
+        mapping: {
+          empty: [],
+        } 
+      }
+    },
+    leftSection: {
+      control: {
+        mapping: {
+          empty: [],
+        } 
+      }
+    },
+    rightSection: {
+      control: {
+        mapping: {
+          empty: [],
+        } 
+      }
+    },
   },
 } as Meta;
+type Story = StoryObj<InputProps>;
 
-export const BasicInput = (args: ToggleProps) => (
-  <>
-
-    <Title
-      title="Forms"
-      description="Forms"
-    />
-
-    <Text type='headline' size={6}>Basic Input</Text>
-    <Input placeholder='ari@bootwind.com'></Input>
-    <Input placeholder='Disabled input' disabled></Input>
-  </>
-)
-export const LabelAndHelperText = (args: ToggleProps) => (
-  <>
-
-    <Title
-      title="Forms"
-      description="Forms"
-    />
-
-    <div className="mb-10">
-      <Text type='headline' size={6}>Input with Label</Text>
-      <Input placeholder='ari@bootwind.com' label='Email'></Input>
-    </div>
-    <div className="mb-10">
-      <Text type='headline' size={6}>Input with Description</Text>
-      <Input placeholder='ari@bootwind.com' label='Email' description={
-        <>
-          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
-          Helping text for user
-        </>
-      }></Input>
-    </div>
-  </>
-)
 const masterCardImage = (
   <>
     <div className="p-1 border rounded-md">
@@ -62,31 +104,45 @@ const masterCardImage = (
     </div>
   </>
 )
-export const LeftRightSections = (args: ToggleProps) => (
-  <>
+export const BasicInput: Story = {
+  args: {
+    placeholder: 'ari@bootwind.com',
+    variant: 'default',
+    rightSection: null,
+  }
+}
+export const WithLabel: Story = {
+  args: {
+    label: 'Email Address',
+    placeholder: 'ari@bootwind.com',
+    variant: 'default'
+  }
+}
+export const WithDescription: Story = {
+  args: {
+    label: 'Email Address',
+    placeholder: 'ari@bootwind.com',
+    variant: 'default',
+    description: (
+        <>
+          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
+          Helping text for user
+        </>
+    )
+  }
+}
+export const LeftRightSection: Story = {
+  args: {
+    label: 'Card Number',
+    placeholder: '1234 1234 1234 1234',
+    variant: 'default',
+    leftSection: masterCardImage,
+    rightSection: <HiOutlineCreditCard></HiOutlineCreditCard>
+  }
+}
 
-    <Title
-      title="Forms"
-      description="Forms"
-    />
 
-    <div className="mb-10">
-      <Input placeholder='1234 1234 1234 1234'
-        label='Card Number'
-        leftSection={masterCardImage}
-      />
-    </div>
-    <div className="mb-10">
-      <Input placeholder='1234 1234 1234 1234'
-        label='Card Number'
-        leftSection={masterCardImage}
-        rightSection={<>
-          <HiOutlineCreditCard></HiOutlineCreditCard>
-        </>}
-      />
-    </div>
-  </>
-)
+
 export const Variants = (args: ToggleProps) => (
   <>
 
@@ -97,43 +153,19 @@ export const Variants = (args: ToggleProps) => (
 
     <div className="mb-10">
       <Text type='paragraph' size={2}>Default</Text>
-      <Input placeholder='ari@bootwind.com' label='Email' description={
-        <>
-          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
-          Helping text for user
-        </>
-      }></Input>
+      <Input variant='default'  {...args}></Input>
     </div>
     <div className="mb-10">
-      <Text type='paragraph' size={2}>Danger</Text>
-      <Input variant='danger' placeholder='ari@bootwind.com' label='Email' description={
-        <>
-          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
-          Helping text for user
-        </>
-      }></Input>
+      <Text type='paragraph' size={2}>Error</Text>
+      <Input variant='error' {...args}></Input>
     </div>
     <div className="mb-10">
       <Text type='paragraph' size={2}>Warning</Text>
-      <Input variant='warning' placeholder='ari@bootwind.com' label='Email' description={
-        <>
-          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
-          Helping text for user
-        </>
-      }></Input>
+      <Input variant='warning' {...args}></Input>
     </div>
     <div className="mb-10">
       <Text type='paragraph' size={2}>Success</Text>
-      <Input variant='success' placeholder='ari@bootwind.com' label='Email' description={
-        <>
-          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
-          Helping text for user
-        </>
-      }></Input>
+      <Input variant='success' {...args}></Input>
     </div>
-  </>
-)
-export const InputGroup = (args: ToggleProps) => (
-  <>
   </>
 )

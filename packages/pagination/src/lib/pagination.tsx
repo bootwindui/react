@@ -6,7 +6,7 @@ import {
   HiArrowRight,
 } from 'react-icons/hi2';
 
-interface PaginationProps {
+export interface PaginationProps {
   type?: 'card' | 'centered' | 'simple';
   currentPage: number;
   totalResults: number;

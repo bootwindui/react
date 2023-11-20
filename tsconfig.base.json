@@ -20,7 +20,7 @@
       "@bootwind/title": ["./packages/title/src/index.ts"],
       "@bootwind/typography": ["packages/typography/src/index.ts"],
       "@bootwind/ui": ["./packages/ui/src/index.ts"],
-      "pagination": ["packages/pagination/src/index.ts"]
+      "@bootwind/pagination": ["packages/pagination/src/index.ts"]
     }
   }
 }

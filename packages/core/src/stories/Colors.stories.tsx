@@ -44,11 +44,6 @@ export const AllColors = () => {
   return (
     <div>
 
-      <Title
-        title="Color Styles"
-        description="Color Styles in the Bootwind Design System are a cornerstone of your design's visual identity. Customize color palettes, shades, and themes to create a cohesive and appealing color scheme that aligns with your brand or project. Whether you're aiming for a vibrant and energetic look or a calm and minimalist aesthetic, Color Styles allow you to convey the right emotions and capture your audience's attention, enhancing the overall visual impact and recognition of your design."
-      />
-
       {colors.map(color => {
         return (
           <div className="flex gap-5 mb-5 px-5">

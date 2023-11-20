@@ -1,14 +1,28 @@
 import React from 'react';
 import { GoChevronRight, GoHome } from 'react-icons/go';
 
-interface BreadcrumbsProps {
-  children: React.ReactNode;
+export interface BreadcrumbsProps {
+  children: React.ReactNode
+  items?: BreadcrumbItemProps[]
 }
 
-export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children }) => {
+export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children, items }) => {
   return (
     <nav className="flex" aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-2">
+        {items?.map((item,index) => (
+          <li key={index}>
+            <div className="flex items-center">
+              {index > 0 && (
+                <GoChevronRight
+                  className="mr-2 h-3 w-3 flex-shrink-0 text-gray-500"
+                  aria-hidden="true"
+                />
+              )}
+              <BreadcrumbItem {...item}></BreadcrumbItem>
+            </div>
+          </li>
+        ))}
         {React.Children.map(children, (child, index) => (
           <li key={index}>
             <div className="flex items-center">

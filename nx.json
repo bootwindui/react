@@ -24,7 +24,7 @@
       "inputs": ["default", "^default"]
     },
     "build-storybook": {
-      "cache": true
+      "cache": false
     }
   },
   "affected": {

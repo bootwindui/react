@@ -48,9 +48,12 @@ export const Badge: React.FC<BadgeProps> = ({
   withDot = false,
   children,
 }) => {
-  const baseClasses = `inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium`;
+  const baseClasses = `inline-flex items-center rounded-md px-2.5 py-0.5 font-medium`;
 
-  const sizeClasses = size === 'large' ? 'text-sm' : '';
+  const sizeClasses = {
+    large: 'text-sm',
+    small: 'text-xs'
+  };
 
   const badgeContent = (
     <>
@@ -78,7 +81,7 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   return (
-    <span className={`${baseClasses} ${sizeClasses} ${getVariantClasses()}`}>
+    <span className={`${baseClasses} ${sizeClasses[size]} ${getVariantClasses()}`}>
       {badgeContent}
     </span>
   );

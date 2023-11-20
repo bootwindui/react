@@ -1,82 +1,56 @@
 import React from 'react';
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import Title from '@bootwind/title';
-import { Breadcrumbs, BreadcrumbItem } from '../index';
-import { GoHome, GoComment, GoBook, GoFileDirectory } from 'react-icons/go';
+import { Breadcrumbs, BreadcrumbItem, BreadcrumbsProps } from '../index';
+import { GoHome, GoComment, GoBook, GoFileDirectory, GoFile } from 'react-icons/go';
 
 export default {
   title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
-  argTypes: {},
+  tags: ['autodocs'],
+  argTypes: {
+    items: {
+      description: "Breadcrumb items to render",
+      control: {
+        type: 'array'
+      }
+    }
+  }
 } as Meta;
+type Story = StoryObj<BreadcrumbsProps>;
 
-export const TextAndIcon = () => (
-  <>
-    <Title
-      title="Breadcrumbs"
-      description="The Breadcrumbs component in the Bootwind Design System provides users with a clear and intuitive navigation path through your website or application. Customize the appearance, style, and links to create a breadcrumb trail that helps users easily track their location and navigate back to previous pages, enhancing overall usability and user experience."
-    />
 
-    <Breadcrumbs>
-      <BreadcrumbItem icon={<GoHome />} href="/">
-        Home
-      </BreadcrumbItem>
-      <BreadcrumbItem href="/docs" icon={<GoBook />}>
-        Docs
-      </BreadcrumbItem>
-      <BreadcrumbItem href="/docs/components" icon={<GoComment />}>
-        Components
-      </BreadcrumbItem>
-      <BreadcrumbItem
-        href="/docs/components/button"
-        icon={<GoFileDirectory />}
-        isActive
-      >
-        Button
-      </BreadcrumbItem>
-    </Breadcrumbs>
-  </>
-);
+export const TextAndIcon: Story = {
+  args: {
+    items: [
+      { icon: <GoHome />, href: '/docs', children: 'Home'},
+      { icon: <GoBook />, href: '/docs/components', children: 'Docs'},
+      { icon: <GoComment />, href: '/docs/components', children: 'Components'},
+      { icon: <GoFileDirectory />, href: '/docs/components/button', isActive: true, children: 'Button'},
+    ]
+  }
+}
 
-export const OnlyText = () => (
-  <>
-    <Title
-      title="Breadcrumbs"
-      description="The Breadcrumbs component in the Bootwind Design System provides users with a clear and intuitive navigation path through your website or application. Customize the appearance, style, and links to create a breadcrumb trail that helps users easily track their location and navigate back to previous pages, enhancing overall usability and user experience."
-    />
+export const OnlyText: Story = {
+  args: {
+    items: [
+      { href: '/docs', children: 'Home'},
+      { href: '/docs/components', children: 'Docs'},
+      { href: '/docs/components', children: 'Components'},
+      { href: '/docs/components/button', isActive: true, children: 'Button'},
+    ]
+  }
+}
 
-    <Breadcrumbs>
-      <BreadcrumbItem href="/">Home</BreadcrumbItem>
-      <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
-      <BreadcrumbItem href="/docs/components">Components</BreadcrumbItem>
-      <BreadcrumbItem href="/docs/components/button" isActive>
-        Button
-      </BreadcrumbItem>
-    </Breadcrumbs>
-  </>
-);
 
-export const OnlyIcon = () => (
-  <>
-
-    <Title
-      title="Breadcrumbs"
-      description="The Breadcrumbs component in the Bootwind Design System provides users with a clear and intuitive navigation path through your website or application. Customize the appearance, style, and links to create a breadcrumb trail that helps users easily track their location and navigate back to previous pages, enhancing overall usability and user experience."
-    />
-
-    <Breadcrumbs>
-      <BreadcrumbItem href="/" icon={<GoHome />}></BreadcrumbItem>
-      <BreadcrumbItem href="/docs" icon={<GoBook />}></BreadcrumbItem>
-      <BreadcrumbItem
-        href="/docs/components"
-        icon={<GoComment />}
-      ></BreadcrumbItem>
-      <BreadcrumbItem
-        href="/docs/components/button"
-        icon={<GoFileDirectory />}
-        isActive
-      ></BreadcrumbItem>
-    </Breadcrumbs>
-  </>
-);
+export const OnlyIcons: Story = {
+  args: {
+    items: [
+      { icon: <GoHome />, href: '/docs' },
+      { icon: <GoBook />, href: '/docs/components' },
+      { icon: <GoComment />, href: '/docs/components' },
+      { icon: <GoFileDirectory />, href: '/docs/components/button', isActive: true },
+    ]
+  }
+}

@@ -98,7 +98,7 @@ export const AllBadges = () => (
       Primary
     </Badge>
     <Badge variant="error" withIcon={<FaRegEnvelope />}>
-      Danger
+      Error
     </Badge>
     <Badge variant="neutral" withIcon={<FaRegEnvelope />}>
       Neutral

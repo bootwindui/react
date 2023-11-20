@@ -45,7 +45,7 @@ export default {
     variant: {
       description: 'The color type of the alert',
       type: "string",
-      options: ['warning', 'danger', 'success', 'info'],
+      options: ['warning', 'error', 'success', 'info'],
       control: {
         type: 'select',
       }

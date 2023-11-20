@@ -1,7 +1,7 @@
 import React, { ReactNode, useId } from 'react';
 import { useState } from 'react';
 
-type InputVariant = "default" | "danger" | "warning" | "success"
+type InputVariant = "default" | "error" | "warning" | "success"
 export interface InputProps {
   id?: string
   type?: string
@@ -27,7 +27,7 @@ export const Input: React.FC<InputProps> = ({
   rightSection
 }) => {
   const variantMap: Record<InputVariant, {input: string, description: string}> = {
-    danger: {
+    error: {
       input: 'bg-red-50 focus:bg-white border-red-300 focus:border-red-400 focus:ring-red-100',
       description: 'text-red-500',
     },

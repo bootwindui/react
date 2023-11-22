@@ -54,7 +54,7 @@ const classes = {
 }
 
 export const Alert: React.FC<AlertProps> = ({
-  variant,
+  variant = "info",
   title,
   icon,
   description,

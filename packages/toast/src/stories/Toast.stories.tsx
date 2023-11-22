@@ -81,12 +81,7 @@ const randomVariants = () => {
 export const Basic = (args: ToastProps) => {
   const { toasts, add } = useToastContext()
   const showToast = () => {
-    add({
-      variant: randomVariants() as AlertProps['variant'],
-      title: "Order success",
-      description: "Thank you for order!",
-      border: "left"
-    })
+    add(args)
   }
   return (
     <>

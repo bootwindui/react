@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import Title from '@bootwind/title';
 import Alert, { AlertProps } from '../index';
 
 export default {

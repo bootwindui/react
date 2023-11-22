@@ -7,6 +7,7 @@ export interface AlertProps {
   title?: string;
   description?: string | ReactNode;
   actions?: React.ReactNode;
+  border?: "left" | "right" | "all" | "none"
   link?: {
     url: string;
     text: string;
@@ -14,30 +15,37 @@ export interface AlertProps {
   dismissButton?: boolean;
 }
 
+const borders = {
+  none: '',
+  all: 'border',
+  left: "border-l-4",
+  right: "border-r-4"
+}
+
 const classes = {
   warning: {
-    bg: 'bg-yellow-50',
+    bg: 'bg-yellow-50 border-yellow-400',
     text: 'text-yellow-800',
     description: 'text-yellow-700',
     link: 'text-yellow-700 hover:text-yellow-600',
     dismissBtn: 'bg-yellow-50 text-yellow-500 hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-offset-2 focus:ring-offset-yellow-50',
   },
   success: {
-    bg: 'bg-green-50',
+    bg: 'bg-green-50 border-green-400',
     text: 'text-green-800',
     description: 'text-green-700',
     link: 'text-green-700 hover:text-green-600',
     dismissBtn: 'bg-green-50 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-green-50',
   },
   error: {
-    bg: 'bg-red-50',
+    bg: 'bg-red-50 border-red-400',
     text: 'text-red-800',
     description: 'text-red-700',
     link: 'text-red-700 hover:text-red-600',
     dismissBtn: 'bg-red-50 text-red-500 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-red-50',
   },
   info: {
-    bg: 'border-l-4 border-blue-400 bg-blue-50',
+    bg: 'border-blue-400 bg-blue-50',
     text: 'text-blue-800',
     description: 'text-blue-700',
     link: 'text-blue-700 hover:text-blue-600',
@@ -51,6 +59,7 @@ export const Alert: React.FC<AlertProps> = ({
   icon,
   description,
   actions,
+  border = "none",
   link,
   dismissButton = false,
 }) => {
@@ -95,7 +104,7 @@ export const Alert: React.FC<AlertProps> = ({
 
   return (
     <div
-      className={`rounded-md p-4 ${classes[variant].bg}`}
+      className={`rounded-md p-4 ${classes[variant].bg} ${borders[border]}`}
     >
       <div className="flex flex-col md:flex-row">
         {icon && (

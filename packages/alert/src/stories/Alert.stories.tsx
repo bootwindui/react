@@ -50,6 +50,15 @@ export default {
         type: 'select',
       }
     },
+    border: {
+      description: 'Whether to add border on the alert',
+      type: "string",
+      options: ["left", "right", "all", "none"],
+      defaultValue: "none",
+      control: {
+        type: 'select',
+      }
+    },
   },
 } as Meta;
 type Story = StoryObj<AlertProps>;
@@ -58,6 +67,7 @@ export const WithTitle: Story = {
   args: {
     variant: 'info',
     title: "With Title",
+    border: "left",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rerum sequi, aperiam nihil harum sapiente veniam rem soluta quasi fugit voluptatem voluptate tempora consectetur vitae dignissimos at ipsum perspiciatis ab!"
   }
 }

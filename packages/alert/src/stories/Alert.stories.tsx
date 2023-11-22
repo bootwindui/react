@@ -97,3 +97,14 @@ export const Link: Story = {
     }
   }
 }
+
+export const Variants = (args: AlertProps) => {
+  return (
+    <div className='flex flex-col gap-5'>
+      <Alert {...args} title='Primary' variant='success'></Alert>
+      <Alert {...args} title='Error' variant='error'></Alert>
+      <Alert {...args} title='Info' variant='info'></Alert>
+      <Alert {...args} title='Warning' variant='warning'></Alert>
+    </div>
+  )
+}

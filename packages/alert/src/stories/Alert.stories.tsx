@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import Title from '@bootwind/title';
 import Alert, { AlertProps } from '../index';
 
 export default {
@@ -50,6 +49,15 @@ export default {
         type: 'select',
       }
     },
+    border: {
+      description: 'Whether to add border on the alert',
+      type: "string",
+      options: ["left", "right", "all", "none"],
+      defaultValue: "none",
+      control: {
+        type: 'select',
+      }
+    },
   },
 } as Meta;
 type Story = StoryObj<AlertProps>;
@@ -58,6 +66,7 @@ export const WithTitle: Story = {
   args: {
     variant: 'info',
     title: "With Title",
+    border: "left",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rerum sequi, aperiam nihil harum sapiente veniam rem soluta quasi fugit voluptatem voluptate tempora consectetur vitae dignissimos at ipsum perspiciatis ab!"
   }
 }
@@ -96,4 +105,15 @@ export const Link: Story = {
       text: 'Open link'
     }
   }
+}
+
+export const Variants = (args: AlertProps) => {
+  return (
+    <div className='flex flex-col gap-5'>
+      <Alert {...args} title='Primary' variant='success'></Alert>
+      <Alert {...args} title='Error' variant='error'></Alert>
+      <Alert {...args} title='Info' variant='info'></Alert>
+      <Alert {...args} title='Warning' variant='warning'></Alert>
+    </div>
+  )
 }

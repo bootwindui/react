@@ -17,10 +17,11 @@
       "@bootwind/common": ["./packages/common/src/index.ts"],
       "@bootwind/core": ["packages/core/src/index.ts"],
       "@bootwind/forms": ["packages/forms/src/index.ts"],
+      "@bootwind/pagination": ["packages/pagination/src/index.ts"],
       "@bootwind/title": ["./packages/title/src/index.ts"],
       "@bootwind/typography": ["packages/typography/src/index.ts"],
       "@bootwind/ui": ["./packages/ui/src/index.ts"],
-      "@bootwind/pagination": ["packages/pagination/src/index.ts"]
+      "@bootwind/toast": ["./packages/toast/src/index.ts"]
     }
   }
 }

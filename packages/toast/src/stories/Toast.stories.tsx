@@ -84,7 +84,8 @@ export const Basic = (args: ToastProps) => {
     add({
       variant: randomVariants() as AlertProps['variant'],
       title: "Order success",
-      description: "Thank you for order!"
+      description: "Thank you for order!",
+      border: "left"
     })
   }
   return (

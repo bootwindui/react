@@ -1,14 +1,16 @@
 import React from 'react';
 import { GoChevronRight, GoHome } from 'react-icons/go';
+import { cn } from "@bootwind/common"
 
 export interface BreadcrumbsProps {
   children: React.ReactNode
   items?: BreadcrumbItemProps[]
+  className?: string
 }
 
-export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children, items }) => {
+export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ children, items, className }) => {
   return (
-    <nav className="flex" aria-label="Breadcrumb">
+    <nav className={cn("flex", className)} aria-label="Breadcrumb">
       <ol role="list" className="flex items-center space-x-2">
         {items?.map((item,index) => (
           <li key={index}>
@@ -46,6 +48,7 @@ interface BreadcrumbItemProps {
   children?: React.ReactNode;
   icon?: React.ReactNode;
   isActive?: boolean;
+  className?: string
 }
 
 export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
@@ -53,6 +56,7 @@ export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   children,
   icon,
   isActive = false,
+  className
 }) => {
   const content = href ? (
     <a
@@ -74,7 +78,7 @@ export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
   );
 
   return (
-    <>
+    <div className={cn("breadcrumb", className)}>
       {icon &&
         React.cloneElement(icon as React.ReactElement, {
           className: `${isActive ? 'text-indigo-600' : 'text-gray-500'} ${
@@ -82,6 +86,6 @@ export const BreadcrumbItem: React.FC<BreadcrumbItemProps> = ({
           }`,
         })}
       {content}
-    </>
+    </div>
   );
 };

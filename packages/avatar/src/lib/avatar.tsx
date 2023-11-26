@@ -1,17 +1,20 @@
 import React from 'react';
+import { cn } from "@bootwind/common"
 
 export interface AvatarProps {
-  src?: string;
-  alt: string;
-  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
-  notificationDot?: 'gray' | 'red' | 'green';
-  showPlaceholder?: boolean; // Tambahkan properti showPlaceholder
+  src?: string
+  alt: string
+  className?: string
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full'
+  notificationDot?: 'gray' | 'red' | 'green'
+  showPlaceholder?: boolean // Tambahkan properti showPlaceholder
 }
 
 export const Avatar: React.FC<AvatarProps> = ({
   src,
   alt,
   rounded = 'md',
+  className,
   notificationDot,
   showPlaceholder = false, // Defaultnya tidak menampilkan placeholder
 }) => {
@@ -32,7 +35,7 @@ export const Avatar: React.FC<AvatarProps> = ({
   const shouldShowPlaceholder = !src && showPlaceholder;
 
   return (
-    <span className="relative inline-block">
+    <span className={cn("relative inline-block", className)}>
       {notificationDot && (
         <span
           className={`absolute bottom-0 right-0 block ${

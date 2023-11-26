@@ -6,9 +6,12 @@ import {
   HiArrowRight,
 } from 'react-icons/hi2';
 
+import {cn} from '@bootwind/common'
+
 export interface PaginationProps {
   type?: 'card' | 'centered' | 'simple';
   currentPage: number;
+  className?: string
   totalResults: number;
   resultsPerPage: number;
   onPrevClick: () => void;
@@ -21,6 +24,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   totalResults,
   resultsPerPage,
+  className,
   onPrevClick,
   onNextClick,
   onPageClick,
@@ -33,7 +37,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   switch (type) {
     case 'card':
       return (
-        <div className="flex items-center justify-between border-t border-gray-200 bg-white py-3">
+        <div className={cn("flex items-center justify-between border-t border-gray-200 bg-white py-3", className)}>
           <div className="flex flex-1 justify-between sm:hidden">
             <button
               type="button"

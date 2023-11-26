@@ -2,9 +2,6 @@ import { Toast, ToastProps } from "..";
 import { Meta, StoryObj } from '@storybook/react';
 import { ToastProvider, useToastContext } from "../lib/ToastProvider";
 import { Button } from "@bootwind/button"
-import { useToast } from "../lib/useToast";
-import { useEffect } from "react";
-import { AlertProps } from "@bootwind/alert";
 
 export default {
     tags: ['autodocs'],

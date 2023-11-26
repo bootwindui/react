@@ -1,4 +1,5 @@
 import React, { ReactNode, useState } from 'react';
+import { cn } from "@bootwind/common"
 import { GoInfo, GoXCircle, GoCheckCircle } from 'react-icons/go';
 
 export interface AlertProps {
@@ -7,6 +8,7 @@ export interface AlertProps {
   title?: string;
   description?: string | ReactNode;
   actions?: React.ReactNode;
+  className?: string
   border?: "left" | "right" | "all" | "none"
   link?: {
     url: string;
@@ -60,6 +62,7 @@ export const Alert: React.FC<AlertProps> = ({
   description,
   actions,
   border = "none",
+  className,
   link,
   dismissButton = false,
 }) => {
@@ -104,7 +107,7 @@ export const Alert: React.FC<AlertProps> = ({
 
   return (
     <div
-      className={`rounded-md p-4 ${classes[variant].bg} ${borders[border]}`}
+      className={cn(`rounded-md p-4`,classes[variant].bg,borders[border])}
     >
       <div className="flex flex-col md:flex-row">
         {icon && (

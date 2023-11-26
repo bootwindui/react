@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import { cn } from "@bootwind/common"
 import { ReactNode } from 'react';
 
 type ButtonVariant = 'primary' | 'secondary' | 'text-only';
@@ -6,16 +7,18 @@ type ButtonSize = 'sm' | 'md' | 'lg' | 'xl';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
+  variant?: ButtonVariant
+  size?: ButtonSize
+  leftIcon?: ReactNode
+  rightIcon?: ReactNode
   children?: ReactNode
+  className?: string
 }
 
 export const Button = ({
   variant = 'primary',
   size = 'md',
+  className,
   leftIcon,
   rightIcon,
   children,
@@ -44,7 +47,7 @@ export const Button = ({
     'text-only': 'text-black',
   };
 
-  const buttonStyles = `${baseStyles} ${sizeStyles[size]} ${colorStyles[variant]}`;
+  const buttonStyles = cn(baseStyles, sizeStyles[size], colorStyles[variant], className);
 
   return (
     <>

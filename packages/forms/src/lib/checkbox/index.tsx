@@ -1,16 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
+import { cn } from "@bootwind/common"
 
 export interface CheckboxProps {
-  id: string;
-  label: string;
-  isRounded?: boolean;
-  indeterminate?: boolean;
+  id: string
+  label: string
+  className?: string
+  isRounded?: boolean
+  indeterminate?: boolean
 }
 
 export const Checkbox: React.FC<CheckboxProps> = ({
   id,
   label,
+  className,
   isRounded = false,
   indeterminate = false,
 }) => {
@@ -28,7 +31,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     : 'h-4 w-4 rounded border-primary text-primary focus:ring-primary';
 
   return (
-    <div className="flex items-center">
+    <div className={cn("flex items-center", className)}>
       <input
         id={id}
         name={id}

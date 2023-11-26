@@ -1,10 +1,11 @@
 import React, { ReactNode, useId } from 'react';
-import { useState } from 'react';
+import { cn } from "@bootwind/common"
 
 type InputVariant = "default" | "error" | "warning" | "success"
 export interface InputProps {
   id?: string
   type?: string
+  className?: string
   name?: string
   variant?: InputVariant
   label?: string
@@ -18,6 +19,7 @@ export const Input: React.FC<InputProps> = ({
   id = useId(),
   label,
   type = "text",
+  className,
   variant = "default",
   description,
   name,
@@ -59,7 +61,7 @@ export const Input: React.FC<InputProps> = ({
                         ${rightSection ? 'pr-14' : ''}
                         `
   return (
-    <div className="input-group mb-3">
+    <div className={cn("input-group mb-3", className)}>
       { label && (
         <div className='bootwind-label mb-2'>
           <label className='text-neutral-600 leading-tight font-medium' htmlFor={id}>{label}</label>

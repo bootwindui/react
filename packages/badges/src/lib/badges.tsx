@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { cn } from "@bootwind/common"
 
 export interface BadgeProps {
   variant: 'primary' | 'neutral' | 'warning' | 'success' | 'error';
@@ -6,6 +7,7 @@ export interface BadgeProps {
   withIcon?: ReactNode;
   withDot?: boolean;
   children: string;
+  className?: string
 }
 
 interface DotSvgProps {
@@ -47,6 +49,7 @@ export const Badge: React.FC<BadgeProps> = ({
   withIcon = null,
   withDot = false,
   children,
+  className
 }) => {
   const baseClasses = `inline-flex items-center rounded-md px-2.5 py-0.5 font-medium`;
 
@@ -81,7 +84,7 @@ export const Badge: React.FC<BadgeProps> = ({
   };
 
   return (
-    <span className={`${baseClasses} ${sizeClasses[size]} ${getVariantClasses()}`}>
+    <span className={cn(baseClasses, sizeClasses[size], getVariantClasses(), className)}>
       {badgeContent}
     </span>
   );

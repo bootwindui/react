@@ -81,6 +81,7 @@ export interface TextProps {
   color?: string
   weight?: TextFontWeight
   children?: ReactNode
+  className?: string
 }
 
 export const Text: React.FC<TextProps> = ({

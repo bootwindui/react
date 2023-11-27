@@ -8,7 +8,7 @@ export const TableHeader = React.forwardRef<
     <>
         <thead
             ref={ref}
-            className={cn("[&_tr:last-child]:border-0", "bg-gray-50 text-slate-400")}
+            className={cn(className, "bg-gray-50 text-slate-400")}
             {...props}
         />
     </>

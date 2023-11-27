@@ -37,6 +37,36 @@ export default {
     },
 } as Meta;
 
+const data = [
+    {
+        type: 'Wade Warren',
+        status: 'Inactive',
+        role: 'Scrum Master',
+        email: 'wade@example.com',
+        team: ['UI', 'Marketing'],
+    },
+    {
+        type: 'Jerome Bell',
+        status: 'Active',
+        role: 'Scrum Master',
+        email: 'wade@example.com',
+        team: ['Product', 'Marketing'],
+    },
+    {
+        type: 'Wade Warren',
+        status: 'Inactive',
+        role: 'Scrum Master',
+        email: 'wade@example.com',
+        team: ['UI', 'Marketing'],
+    },
+    {
+        type: 'Jerome Bell',
+        status: 'Active',
+        role: 'Scrum Master',
+        email: 'wade@example.com',
+        team: ['Product', 'Marketing'],
+    },
+]
 
 export const BasicTable = () => (
     <Table>
@@ -49,50 +79,73 @@ export const BasicTable = () => (
             <TableHead></TableHead>
         </TableHeader>
         <TableBody>
-            <TableRow>
-                <TableCell>Wade Warren</TableCell>
-                <TableCell>
-                    <Badge variant="error" withDot={true}>Inactive</Badge>
-                </TableCell>
-                <TableCell>
-                    Scrum Master
-                </TableCell>
-                <TableCell>
-                    wade@example.com
-                </TableCell>
-                <TableCell>
-                    <div className="flex gap-1 flex-wrap flex-shrink-0">
-                        <Badge variant="primary">UI</Badge>
-                        <Badge variant="primary">Marketing</Badge>
-                        <Badge variant="neutral">+ 3</Badge>
-                    </div>
-                </TableCell>
-                <TableCell>
-                    <Button variant="secondary" className="rounded-full"><HiEllipsisHorizontal /></Button>
-                </TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell>Ralph Edwards</TableCell>
-                <TableCell>
-                    <Badge variant="success" withDot={true}>Active</Badge>
-                </TableCell>
-                <TableCell>
-                    UI/UX Designer
-                </TableCell>
-                <TableCell>
-                    ralph@example.com
-                </TableCell>
-                <TableCell>
-                    <div className="flex gap-1 flex-wrap flex-shrink-0">
-                        <Badge variant="primary">Product</Badge>
-                        <Badge variant="primary">Marketing</Badge>
-                        <Badge variant="neutral">+ 3</Badge>
-                    </div>
-                </TableCell>
-                <TableCell>
-                    <Button variant="secondary" className="rounded-full"><HiEllipsisHorizontal /></Button>
-                </TableCell>
-            </TableRow>
+            {data.map(person => (
+                <TableRow>
+                    <TableCell>{person.type}</TableCell>
+                    <TableCell>
+                        <Badge variant={person.status == 'Active' ? 'success' : 'error'} withDot={true}>{person.status}</Badge>
+                    </TableCell>
+                    <TableCell>
+                        {person.role}
+                    </TableCell>
+                    <TableCell>
+                        {person.email}
+                    </TableCell>
+                    <TableCell>
+                        <div className="flex gap-1 flex-wrap flex-shrink-0">
+                            {person.team.map(name => (
+                                <Badge variant="primary">{name}</Badge>
+                            ))}
+                            <Badge variant="neutral">+ 3</Badge>
+                        </div>
+                    </TableCell>
+                    <TableCell>
+                        <Button variant="secondary" className="rounded-full"><HiEllipsisHorizontal /></Button>
+                    </TableCell>
+                </TableRow>
+            ))
+            }
+        </TableBody>
+    </Table>
+)
+
+export const StripedTable = () => (
+    <Table variant="striped">
+        <TableHeader>
+            <TableHead>Type</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Role</TableHead>
+            <TableHead>Email Address</TableHead>
+            <TableHead>Team</TableHead>
+            <TableHead></TableHead>
+        </TableHeader>
+        <TableBody>
+            {data.map(person => (
+                <TableRow>
+                    <TableCell>{person.type}</TableCell>
+                    <TableCell>
+                        <Badge variant={person.status == 'Active' ? 'success' : 'error'} withDot={true}>{person.status}</Badge>
+                    </TableCell>
+                    <TableCell>
+                        {person.role}
+                    </TableCell>
+                    <TableCell>
+                        {person.email}
+                    </TableCell>
+                    <TableCell>
+                        <div className="flex gap-1 flex-wrap flex-shrink-0">
+                            {person.team.map(name => (
+                                <Badge variant="primary">{name}</Badge>
+                            ))}
+                            <Badge variant="neutral">+ 3</Badge>
+                        </div>
+                    </TableCell>
+                    <TableCell>
+                        <Button variant="secondary" className="rounded-full"><HiEllipsisHorizontal /></Button>
+                    </TableCell>
+                </TableRow>
+            ))
+            }
         </TableBody>
     </Table>
 )

@@ -149,3 +149,44 @@ export const StripedTable = () => (
         </TableBody>
     </Table>
 )
+
+export const BorderedTable = () => (
+    <Table variant="striped" borders="all">
+        <TableHeader>
+            <TableHead>Type</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Role</TableHead>
+            <TableHead>Email Address</TableHead>
+            <TableHead>Team</TableHead>
+            <TableHead></TableHead>
+        </TableHeader>
+        <TableBody>
+            {data.map(person => (
+                <TableRow>
+                    <TableCell>{person.type}</TableCell>
+                    <TableCell>
+                        <Badge variant={person.status == 'Active' ? 'success' : 'error'} withDot={true}>{person.status}</Badge>
+                    </TableCell>
+                    <TableCell>
+                        {person.role}
+                    </TableCell>
+                    <TableCell>
+                        {person.email}
+                    </TableCell>
+                    <TableCell>
+                        <div className="flex gap-1 flex-wrap flex-shrink-0">
+                            {person.team.map(name => (
+                                <Badge variant="primary">{name}</Badge>
+                            ))}
+                            <Badge variant="neutral">+ 3</Badge>
+                        </div>
+                    </TableCell>
+                    <TableCell>
+                        <Button variant="secondary" className="rounded-full"><HiEllipsisHorizontal /></Button>
+                    </TableCell>
+                </TableRow>
+            ))
+            }
+        </TableBody>
+    </Table>
+)

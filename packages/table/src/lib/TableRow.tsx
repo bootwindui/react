@@ -8,7 +8,7 @@ export const TableRow = React.forwardRef<
     <>
         <tr
             ref={ref}
-            className={cn("border-b border-b-[#e9eff6] transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className)}
+            className={cn("transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted", className)}
             {...props}
         >
           {children}

@@ -19,9 +19,10 @@
       "@bootwind/forms": ["packages/forms/src/index.ts"],
       "@bootwind/pagination": ["packages/pagination/src/index.ts"],
       "@bootwind/title": ["./packages/title/src/index.ts"],
+      "@bootwind/toast": ["./packages/toast/src/index.ts"],
       "@bootwind/typography": ["packages/typography/src/index.ts"],
       "@bootwind/ui": ["./packages/ui/src/index.ts"],
-      "@bootwind/toast": ["./packages/toast/src/index.ts"]
+      "table": ["packages/table/src/index.ts"]
     }
   }
 }

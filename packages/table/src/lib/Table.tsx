@@ -1,12 +1,17 @@
-/* eslint-disable-next-line */
-export interface TableProps {}
+import React from "react";
+import { cn } from "@bootwind/common"
 
-export function Table(props: TableProps) {
-  return (
-    <div>
-      <h1>Welcome to Table!</h1>
+export const Table = React.forwardRef<
+    HTMLTableElement,
+    React.HTMLAttributes<HTMLTableElement>
+>(({ className, ...props }, ref) => (
+    <>
+    <div className="relative w-full overflow-auto">
+        <table
+            ref={ref}
+            className={cn("w-full caption-bottom text-sm", className)}
+            {...props}
+        />
     </div>
-  );
-}
-
-export default Table;
+    </>
+))

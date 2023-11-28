@@ -1,17 +1,7 @@
 import { Meta } from '@storybook/react';
 
-import Title from '@bootwind/title';
-
 export default {
   title: 'Components/Core/Colors',
-  argTypes: {
-    variant: {
-      control: { type: 'radio', options: ['primary', 'secondary', 'ghost'] },
-    },
-    size: {
-      control: { type: 'radio', options: ['sm', 'md', 'lg', 'xl'] },
-    },
-  },
 } as Meta;
 
 export const AllColors = () => {
@@ -42,8 +32,16 @@ export const AllColors = () => {
   const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
   return (
-    <div>
-
+    <div className='bg-[#F4F5F7] p-4'>
+      <div className="flex gap-5 mb-5 px-5">
+        <div>
+          <div className={`color-swatch bg-primary w-48 h-16 rounded-md`} >
+          </div>
+          <p className='flex justify-between'>
+            <span>primary</span>
+          </p>
+        </div>
+      </div>
       {colors.map(color => {
         return (
           <div className="flex gap-5 mb-5 px-5">

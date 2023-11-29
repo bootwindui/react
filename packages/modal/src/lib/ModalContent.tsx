@@ -30,7 +30,7 @@ export const ModalContent = ({ isOpen = false, ...props }: ModalContentProps) =>
     return (
         createPortal(
             (
-                <div className={cn("fixed inset-0 transition duration-200 [&:not(.show)]:hidden [&:is(.show)_.modal]:top-24", isOpen ? 'show' : '')}>
+                <div className={cn("fixed inset-0 transition duration-200 [&:not(.show)]:opacity-0 [&:is(.show)]:opacity-100 :invisible [&:is(.show)]:visible [&:is(.show)]:transition [&:is(.show)_.modal]:top-24 ", isOpen ? 'show' : '')}>
                     <div className="relative">
                         <div className="modal z-[100] top-20 bg-white absolute max-w-[600px] w-full mx-5 left-1/2 -translate-x-1/2 rounded-md">
                             {props.children}

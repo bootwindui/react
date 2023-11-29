@@ -1,11 +1,16 @@
+import { ReactNode } from "react";
+import { ModalProvider } from "./ModalProvider";
+
 /* eslint-disable-next-line */
-export interface ModalProps {}
+export interface ModalProps {
+  children: ReactNode | string
+}
 
 export function Modal(props: ModalProps) {
   return (
-    <div>
-      <h1>Welcome to Modal!</h1>
-    </div>
+    <ModalProvider>
+      {props.children}
+    </ModalProvider>
   );
 }
 

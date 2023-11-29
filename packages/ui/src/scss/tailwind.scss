@@ -7,6 +7,6 @@
         @apply bg-background text-foreground;
     }
     h1,h2,h3,h4,h5,h6 {
-        color: hsl(210 40% 98%);
+        color: var(--heading-foreground);
     }
 }

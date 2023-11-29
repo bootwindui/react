@@ -36,7 +36,7 @@ export const ModalContent = ({ isOpen = false, ...props }: ModalContentProps) =>
                             {props.children}
                         </div>
                     </div>
-                    <ModalBackdrop/>
+                    <ModalBackdrop onClick={() => context.closeModal()}/>
                 </div>
             ),
             document.body

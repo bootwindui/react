@@ -22,6 +22,7 @@
       "@bootwind/toast": ["./packages/toast/src/index.ts"],
       "@bootwind/typography": ["packages/typography/src/index.ts"],
       "@bootwind/ui": ["./packages/ui/src/index.ts"],
+      "modal": ["packages/modal/src/index.ts"],
       "table": ["packages/table/src/index.ts"]
     }
   }

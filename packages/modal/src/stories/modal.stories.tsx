@@ -30,7 +30,9 @@ export const Basic = () => {
                         <ModalTitle>Sign In</ModalTitle>
                     </ModalHeader>
                     <ModalBody>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia a, molestiae soluta cupiditate consequuntur ullam voluptates, commodi magnam unde amet similique quae! Nostrum ducimus veniam sed labore praesentium molestias.
+                        <p className='mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia a, molestiae soluta cupiditate consequuntur ullam voluptates, commodi magnam unde amet similique quae! Nostrum ducimus veniam sed labore praesentium molestias.</p>
+                        <p className='mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia a, molestiae soluta cupiditate consequuntur ullam voluptates, commodi magnam unde amet similique quae! Nostrum ducimus veniam sed labore praesentium molestias.</p>
+                        <p className='mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe mollitia a, molestiae soluta cupiditate consequuntur ullam voluptates, commodi magnam unde amet similique quae! Nostrum ducimus veniam sed labore praesentium molestias.</p>
                     </ModalBody>
                     <ModalFooter>
                         <Button onClick={() => setIsOpen(false)}>Close</Button>

@@ -9,7 +9,7 @@ const preview: Preview = {
       values: [
         {
           name: 'bootwind',
-          value: 'white',
+          value: '#F3F4F6',
         }
       ]
     },

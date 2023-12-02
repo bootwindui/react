@@ -1,1 +1,1 @@
-export * from './lib/Modal';
+export * from './lib/modal';

@@ -10,9 +10,9 @@ import { ModalFooter } from '../lib/ModalFooter';
 import { useState } from 'react';
 
 export default {
-  title: 'Components/Modal',
-  component: Modal,
-  tags: ['autodocs'],
+    title: 'Components/Modal',
+    component: Modal,
+    tags: ['autodocs'],
 } as Meta;
 
 export const Basic = () => {

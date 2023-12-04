@@ -18,3 +18,14 @@ export const Error: Story = {
     variant: "error"
   }
 }
+export const Disabled: Story = {
+  args: {
+    variant: "error",
+    disabled: true
+  }
+}
+export const Filled: Story = {
+  args: {
+    filled: true
+  }
+}

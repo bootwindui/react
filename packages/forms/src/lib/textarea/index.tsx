@@ -9,7 +9,8 @@ export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextArea
   variant?: TextareaVariant
   label?: string
   placeholder?: string
-  disabled?: boolean,
+  filled?: boolean
+  disabled?: boolean
   description?: string | ReactNode
   leftSection?: string | ReactNode
   rightSection?: string | ReactNode
@@ -23,43 +24,49 @@ export const Textarea: React.FC<TextareaProps> = ({
   name,
   placeholder,
   disabled = false,
+  filled=true,
   leftSection,
   rightSection,
   ...props
 }) => {
-  const variantMap: Record<TextareaVariant, {input: string, description: string}> = {
+  const variantMap: Record<TextareaVariant, {input: string, description: string, filled: string}> = {
     error: {
-      input: 'bg-red-50 focus:bg-white border-red-300 focus:border-red-400 focus:ring-red-100',
+      input: 'bg-red-50 focus:bg-white border-red-300 focus:border-red-500',
+      filled: 'bg-red-50',
       description: 'text-red-500',
     },
     default: {
-      input: 'border-gray-300 focus:bg-white hover:border-gray-900 focus:border-gray-400 focus:ring-gray-300',
+      input: 'border-gray-300 focus:bg-white hover:border-gray-900 focus:border-gray-500',
+      filled: 'bg-gray-100',
       description: 'text-zinc-500',
     },
     success: {
-      input: 'bg-green-50 focus:bg-white border-green-300 hover:border-green-900 focus:border-green-400 focus:ring-green-100',
+      input: 'bg-green-50 focus:bg-white border-green-300 hover:border-green-900 focus:border-green-500',
+      filled: 'bg-green-50',
       description: 'text-green-500',
     },
     warning: {
-      input: 'bg-orange-50 focus:bg-white border-orange-300 hover:border-orange-900 focus:border-orange-400 focus:ring-orange-100',
+      input: 'bg-orange-50 focus:bg-white border-orange-300 hover:border-orange-900 focus:border-orange-500',
+      filled: 'bg-orange-50',
       description: 'text-orange-500',
     },
   }
   const classes = variantMap[variant]
   const inputClasses = `transition duration-200 placeholder:text-gray-400 
-                        rounded-lg
                         focus:ring-4
                         text-gray-900 
                         py-2.5 px-3.5
                         w-80 max-w-full
-                        disabled:bg-neutral-100
+                        focus:ring-0 disabled:border-gray-200
+                        disabled:bg-transparent
                         disabled:cursor-not-allowed
                         ${classes.input}
                         ${leftSection ? 'pl-14' : ''}
                         ${rightSection ? 'pr-14' : ''}
+                        ${filled ? 'border-0 border-b rounded-none' + classes.filled : 'border rounded-lg'}
                         `
   return (
-    <div className={cn("input-group mb-3", className)}>
+    <div className={"input-group mb-3"}>
       { label && (
         <div className='bootwind-label mb-2'>
           <label className='text-neutral-600 leading-tight font-medium' htmlFor={id}>{label}</label>
@@ -71,9 +78,9 @@ export const Textarea: React.FC<TextareaProps> = ({
             { leftSection }
           </label>
         )}
-        <textarea {...props} placeholder={placeholder} id={id} name={name} className={inputClasses} disabled={disabled}/>
+        <textarea {...props} placeholder={placeholder} id={id} name={name} className={cn(className, inputClasses)} disabled={disabled}/>
         {rightSection && (
-          <label htmlFor={id} className="input-right-section absolute items-center right-0 top-0 flex justify-center h-full w-14">
+          <label htmlFor={id} className={"input-right-section absolute items-center right-0 top-0 flex justify-center h-full w-14"}>
             { rightSection }
           </label>
         )}

@@ -1,4 +1,4 @@
-import{j as e,F as x,a as p}from"./jsx-runtime-29545a09.js";import{C as s}from"./index-01fa272a.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./cn-a0481221.js";const v={title:"Components/Forms/Checkbox",component:s,tags:["autodocs"],argTypes:{isRounded:{control:"boolean"},indeterminate:{control:"boolean"}}},a={args:{id:"myRandomCheckboxId",isRounded:!0,label:"Basic Checkbox",indeterminate:!1}},o=h=>e(x,{children:p("div",{className:"flex flex-col space-y-4",children:[e("div",{children:e(s,{id:"roundedCheckbox",label:"Rounded Checkbox",isRounded:!0})}),e("div",{children:e(s,{id:"squareCheckbox",label:"Square Checkbox",isRounded:!1})})]})}),r={args:{label:"Basic Checkbox",indeterminate:!0}};var n,d,c;a.parameters={...a.parameters,docs:{...(n=a.parameters)==null?void 0:n.docs,source:{originalSource:`{
+import{j as e,F as x,a as p}from"./jsx-runtime-29545a09.js";import{C as s}from"./index-b93cb78b.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./cn-a0481221.js";const v={title:"Components/Forms/Checkbox",component:s,tags:["autodocs"],argTypes:{isRounded:{control:"boolean"},indeterminate:{control:"boolean"}}},a={args:{id:"myRandomCheckboxId",isRounded:!0,label:"Basic Checkbox",indeterminate:!1}},o=h=>e(x,{children:p("div",{className:"flex flex-col space-y-4",children:[e("div",{children:e(s,{id:"roundedCheckbox",label:"Rounded Checkbox",isRounded:!0})}),e("div",{children:e(s,{id:"squareCheckbox",label:"Square Checkbox",isRounded:!1})})]})}),r={args:{label:"Basic Checkbox",indeterminate:!0}};var n,d,c;a.parameters={...a.parameters,docs:{...(n=a.parameters)==null?void 0:n.docs,source:{originalSource:`{
   args: {
     id: 'myRandomCheckboxId',
     isRounded: true,
@@ -20,4 +20,4 @@ import{j as e,F as x,a as p}from"./jsx-runtime-29545a09.js";import{C as s}from".
     indeterminate: true
   }
 }`,...(b=(u=r.parameters)==null?void 0:u.docs)==null?void 0:b.source}}};const S=["Basic","Variants","IndeterminateState"];export{a as Basic,r as IndeterminateState,o as Variants,S as __namedExportsOrder,v as default};
-//# sourceMappingURL=Checkbox.stories-5f4096ec.js.map
+//# sourceMappingURL=Checkbox.stories-9ad1f827.js.map

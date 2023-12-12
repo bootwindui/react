@@ -2,13 +2,13 @@ import { cn } from "@bootwind/common";
 import React, { ReactNode } from "react";
 
 export interface TooltipProps {
-  content: ReactNode;
+  content?: ReactNode;
   children: ReactNode;
   variant?: "dark" | "light",
   position?: "top" | "bottom" | "right" | "left";
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ children, content }) => {
+const Tooltip: React.FC<TooltipProps> = ({ children }) => {
   
   return (
     <div className="tooltip-wrapper group relative inline-block"> 

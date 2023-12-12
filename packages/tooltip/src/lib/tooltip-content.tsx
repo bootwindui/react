@@ -17,15 +17,13 @@ export const TooltipContent = ({ children, className, variant, position = "top" 
         bottom: 'left-1/2 top-full z-20 mt-3 -translate-x-1/2',
     }
     const classes = cn(
-        'absolute rounded whitespace-nowrap px-4 py-[6px] text-sm font-semibold  opacity-0 group-hover:opacity-100',
-        variant === 'dark' ? 'bg-black text-white' : 'bg-white text-black',
+        'tooltip-content hidden absolute rounded whitespace-nowrap w-auto px-4 py-[6px] text-center text-sm font-semibold shadow-slate-300',
+        variant === 'dark' ? 'bg-[#2D3643] text-white' : 'bg-[#E9EFF6] text-slate-600',
         positionClasses[position]
     )
     return (
         <div className={classes}>
-            <div className={`w-40 whitespace-normal text-center`}>
                 {children}
-            </div>
         </div>
     )
 }

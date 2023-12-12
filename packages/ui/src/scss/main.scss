@@ -5,3 +5,10 @@
 body {
     font-family: 'Inter';
 }
+a {
+    @apply text-indigo-600;
+}
+
+.tooltip-wrapper:hover .tooltip-content {
+    display: block
+}

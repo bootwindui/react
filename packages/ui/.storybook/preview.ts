@@ -5,7 +5,6 @@ const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     backgrounds: {
-      default: 'bootwind',
       values: [
         {
           name: 'bootwind',

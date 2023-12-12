@@ -29,7 +29,7 @@ export const Bottom = Template.bind({});
 Bottom.args = {
     position: 'bottom',
     content: 'This is a custom tooltip content',
-    color: 'light'
+    variant: 'light'
 };
 
 export const Left = Template.bind({});
@@ -48,12 +48,12 @@ export const Light = Template.bind({});
 Light.args = {
     position: 'bottom',
     content: 'Light Tooltip',
-    color: 'light'
+    variant: 'light'
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
     position: 'bottom',
     content: 'Dark Tooltip',
-    color: 'dark'
+    variant: 'dark'
 };

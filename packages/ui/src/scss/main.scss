@@ -8,3 +8,7 @@ body {
 a {
     @apply text-indigo-600;
 }
+
+.tooltip-trigger:hover ~ .tooltip-content {
+    opacity: 1
+}

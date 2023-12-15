@@ -6,7 +6,13 @@ body {
     font-family: 'Inter';
 }
 a {
-    @apply text-indigo-600;
+    @apply text-indigo-600 transition duration-150;
+}
+.color-default {
+    @apply text-zinc-400
+}
+a.color-default {
+    @apply  hover:text-zinc-800;
 }
 
 .tooltip-wrapper:hover .tooltip-content {

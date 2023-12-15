@@ -19,13 +19,14 @@
       "@bootwind/forms": ["packages/forms/src/index.ts"],
       "@bootwind/modal": ["packages/modal/src/index.ts"],
       "@bootwind/pagination": ["packages/pagination/src/index.ts"],
-      "@bootwind/title": ["./packages/title/src/index.ts"],
-      "@bootwind/toast": ["./packages/toast/src/index.ts"],
-      "@bootwind/typography": ["packages/typography/src/index.ts"],
-      "@bootwind/ui": ["./packages/ui/src/index.ts"],
       "@bootwind/slider": ["packages/slider/src/index.ts"],
       "@bootwind/table": ["packages/table/src/index.ts"],
-      "@bootwind/tooltip": ["packages/tooltip/src/index.ts"]
+      "@bootwind/title": ["./packages/title/src/index.ts"],
+      "@bootwind/toast": ["./packages/toast/src/index.ts"],
+      "@bootwind/tooltip": ["packages/tooltip/src/index.ts"],
+      "@bootwind/typography": ["packages/typography/src/index.ts"],
+      "@bootwind/ui": ["./packages/ui/src/index.ts"],
+      "@bootwind/tabs": ["packages/tabs/src/index.ts"]
     }
   }
 }

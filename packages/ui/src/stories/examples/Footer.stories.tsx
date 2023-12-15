@@ -21,7 +21,7 @@ export const FooterWithNewsletter = () => {
     return (
         <footer className="py-8 border-t color-default">
             <div className="container mx-auto">
-                <section className="footer-top grid lg:grid-cols-2 ">
+                <section className="footer-top grid lg:grid-cols-2 gap-10">
                     <div className="footer-menus grid lg:grid-cols-3">
                         {
                             Object.keys(menus).map(menu => (
@@ -77,7 +77,7 @@ export const FooterWithLogo = () => {
     return (
         <footer className="py-8 border-t color-default">
             <div className="container mx-auto">
-                <section className="footer-top grid lg:grid-cols-2 ">
+                <section className="footer-top grid lg:grid-cols-2 gap-10">
                     <div className="footer-left pr-48">
                         <h4 className="font-bold text-lg mb-5">Logo</h4>
                         <p className="mb-8">

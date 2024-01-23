@@ -16,7 +16,7 @@ export default {
   },
   argTypes: {
     type: {
-      description: "Size of the text",
+      description: "Size of the texts",
       control: {
         type: 'select'
       },

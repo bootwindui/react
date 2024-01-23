@@ -6,7 +6,7 @@ import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof Card> = {
   component: Card,
-  title: 'Components/Card',
+  title: '❖ • UI Components/Card',
   tags: ['autodocs'],
   argTypes: {
     options: {

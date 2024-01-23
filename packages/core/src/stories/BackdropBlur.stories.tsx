@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-    title: 'Components/Core/Backdrop Blur',
+    title: '❖ • Core/Backdrop Blur',
 } as Meta;
 
 export const AllBackdropBlur = () => {

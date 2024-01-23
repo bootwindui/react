@@ -6,7 +6,7 @@ import { Breadcrumbs, BreadcrumbItem, BreadcrumbsProps } from '../index';
 import { GoHome, GoComment, GoBook, GoFileDirectory, GoFile } from 'react-icons/go';
 
 export default {
-  title: 'Components/Breadcrumbs',
+  title: '❖ • UI Components/Breadcrumbs',
   component: Breadcrumbs,
   tags: ['autodocs'],
   argTypes: {
@@ -24,10 +24,10 @@ type Story = StoryObj<BreadcrumbsProps>;
 export const TextAndIcon: Story = {
   args: {
     items: [
-      { icon: <GoHome />, href: '/docs', children: 'Home'},
-      { icon: <GoBook />, href: '/docs/components', children: 'Docs'},
-      { icon: <GoComment />, href: '/docs/components', children: 'Components'},
-      { icon: <GoFileDirectory />, href: '/docs/components/button', isActive: true, children: 'Button'},
+      { icon: <GoHome />, href: '/docs', children: 'Home' },
+      { icon: <GoBook />, href: '/docs/components', children: 'Docs' },
+      { icon: <GoComment />, href: '/docs/components', children: 'Components' },
+      { icon: <GoFileDirectory />, href: '/docs/components/button', isActive: true, children: 'Button' },
     ]
   }
 }
@@ -35,10 +35,10 @@ export const TextAndIcon: Story = {
 export const OnlyText: Story = {
   args: {
     items: [
-      { href: '/docs', children: 'Home'},
-      { href: '/docs/components', children: 'Docs'},
-      { href: '/docs/components', children: 'Components'},
-      { href: '/docs/components/button', isActive: true, children: 'Button'},
+      { href: '/docs', children: 'Home' },
+      { href: '/docs/components', children: 'Docs' },
+      { href: '/docs/components', children: 'Components' },
+      { href: '/docs/components/button', isActive: true, children: 'Button' },
     ]
   }
 }

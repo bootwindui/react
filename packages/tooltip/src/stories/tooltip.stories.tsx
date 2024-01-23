@@ -6,7 +6,7 @@ import { TooltipTrigger } from '../lib/tooltip-trigger';
 import { TooltipContent } from '../lib/tooltip-content';
 
 export default {
-    title: 'Components/Tooltip',
+    title: '❖ • Components/Tooltip',
     component: Tooltip,
     argTypes: {
         position: {

@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Core/Grid System',
+  title: '❖ • Core/Grid System',
 } as Meta;
 
 export const AllGridSystem = () => {

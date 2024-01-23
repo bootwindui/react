@@ -7,7 +7,7 @@ import { Button, ButtonProps } from '../index';
 import { FaRegEnvelope } from 'react-icons/fa6';
 
 export default {
-  title: 'Components/Button',
+  title: '❖ • Components/Button',
   component: Button,
   tags: ['autodocs'],
   args: {
@@ -28,17 +28,17 @@ export default {
       control: { type: 'radio', options: ['sm', 'md', 'lg', 'xl'] },
     },
     leftIcon: {
-      control: { 
+      control: {
         mapping: {
           empty: [],
-        } 
+        }
       },
     },
     rightIcon: {
-      control: { 
+      control: {
         mapping: {
           empty: [],
-        } 
+        }
       },
     },
   },
@@ -47,7 +47,7 @@ type Story = StoryObj<ButtonProps>;
 
 export const Basic: Story = {
   args: {
-    rightIcon: <HiOutlineArrowRight/>,
+    rightIcon: <HiOutlineArrowRight />,
     leftIcon: <FaRegEnvelope />,
     size: 'lg',
   }
@@ -73,7 +73,7 @@ export const SizeLarge: Story = {
 export const VariantPrimary: Story = {
   args: {
     children: "Click Me",
-    rightIcon: <HiOutlineArrowRight/>,
+    rightIcon: <HiOutlineArrowRight />,
     leftIcon: <FaRegEnvelope />,
     variant: 'primary'
   }
@@ -81,7 +81,7 @@ export const VariantPrimary: Story = {
 export const VariantSecondary: Story = {
   args: {
     children: "Click Me",
-    rightIcon: <HiOutlineArrowRight/>,
+    rightIcon: <HiOutlineArrowRight />,
     leftIcon: <FaRegEnvelope />,
     variant: 'secondary'
   }
@@ -89,11 +89,11 @@ export const VariantSecondary: Story = {
 export const VariantTextOnly: Story = {
   args: {
     children: "Click Me",
-    rightIcon: <HiOutlineArrowRight/>,
+    rightIcon: <HiOutlineArrowRight />,
     leftIcon: <FaRegEnvelope />,
     variant: 'text-only'
   }
 }
 export const Disabled = (args: ButtonProps) => (
-  <Button {...args} disabled={true} rightIcon={<HiOutlineArrowRight/>} leftIcon={<FaRegEnvelope />}></Button>
+  <Button {...args} disabled={true} rightIcon={<HiOutlineArrowRight />} leftIcon={<FaRegEnvelope />}></Button>
 )

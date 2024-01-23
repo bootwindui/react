@@ -8,13 +8,13 @@ import { Text } from '@bootwind/typography';
 import { Input, InputProps, type ToggleProps } from '../index';
 
 export default {
-  title: 'Components/Forms/Input',
+  title: '❖ • Components/Input',
   tags: ['autodocs'],
   component: Input,
   args: {
     rightSection: <HiOutlineCreditCard></HiOutlineCreditCard>,
-    placeholder:'ari@bootwind.com',
-    label:'Email',
+    placeholder: 'ari@bootwind.com',
+    label: 'Email',
     description: (
       <>
         <HiOutlineQuestionMarkCircle className='w-4 h-4' />
@@ -72,21 +72,21 @@ export default {
       control: {
         mapping: {
           empty: [],
-        } 
+        }
       }
     },
     leftSection: {
       control: {
         mapping: {
           empty: [],
-        } 
+        }
       }
     },
     rightSection: {
       control: {
         mapping: {
           empty: [],
-        } 
+        }
       }
     },
   },
@@ -124,10 +124,10 @@ export const WithDescription: Story = {
     placeholder: 'ari@bootwind.com',
     variant: 'default',
     description: (
-        <>
-          <HiOutlineQuestionMarkCircle className='w-4 h-4' />
-          Helping text for user
-        </>
+      <>
+        <HiOutlineQuestionMarkCircle className='w-4 h-4' />
+        Helping text for user
+      </>
     )
   }
 }

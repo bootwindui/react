@@ -5,7 +5,7 @@ import { Button } from '@bootwind/button'
 import { HiEllipsisHorizontal } from 'react-icons/hi2'
 
 export default {
-    title: 'Components/Table',
+    title: '❖ • UI Components/Table',
     component: Table,
     args: {
         type: 'card',

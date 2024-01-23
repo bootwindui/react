@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Core/Blur',
+  title: '❖ • Core/Blur',
 } as Meta;
 
 export const AllBlur = () => {

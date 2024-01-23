@@ -1,12 +1,12 @@
 import React from 'react';
-import {  Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import Title from '@bootwind/title';
 import { Badge, BadgeProps } from '../index';
 import { FaRegEnvelope } from 'react-icons/fa6'; // Import ikon dari react-icons atau dari sumber lain
 
 export default {
-  title: 'Components/Badge',
+  title: '❖ • UI Components/Badge',
   component: Badge,
   tags: ['autodocs'],
   args: {

@@ -10,7 +10,7 @@ import { ModalFooter } from '../lib/ModalFooter';
 import { useState } from 'react';
 
 export default {
-    title: 'Components/Modal',
+    title: '❖ • UI Components/Modal',
     component: Modal,
     tags: ['autodocs'],
 } as Meta;

@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Core/Colors',
+  title: '❖ • Core/Colors',
 } as Meta;
 
 export const AllColors = () => {

@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Core/Gradients',
+  title: '❖ • Core/Gradients',
 } as Meta;
 
 export const AllGradients = () => {

@@ -4,71 +4,71 @@ import { ToastProvider, useToastContext } from "../lib/ToastProvider";
 import { Button } from "@bootwind/button"
 
 export default {
-    tags: ['autodocs'],
-    title: 'Components/Toast',
-    component: Toast,
-    decorators: [
-      (Story: any) => (
-        <ToastProvider>
-          <div className="min-h-screen">
-            <Story />
-          </div>
-        </ToastProvider>
-      )
-    ],
-    args: {
-      title: "Hi There!",
-      description: 'Welcome back, User!',
-      dismissButton: false,
+  tags: ['autodocs'],
+  title: '❖ • UI Components/Toast',
+  component: Toast,
+  decorators: [
+    (Story: any) => (
+      <ToastProvider>
+        <div className="min-h-screen">
+          <Story />
+        </div>
+      </ToastProvider>
+    )
+  ],
+  args: {
+    title: "Hi There!",
+    description: 'Welcome back, User!',
+    dismissButton: false,
+  },
+  argTypes: {
+    description: {
+      description: 'The title text',
+      type: "string",
+      control: {
+        type: 'text'
+      }
     },
-    argTypes: {
-      description: {
-        description: 'The title text',
-        type: "string",
-        control: {
-          type: 'text'
-        }
-      },
-      dismissButton: {
-        description: 'Whether to show dismiss button',
-        type: "boolean",
-        control: {
-          type: 'boolean',
-        }
-      },
-      link: {
-        description: 'Add link to the alert',
-        type: "string",
-        control: {
-          type: 'object',
-        }
-      },
-      icon: {
-        description: 'Alert icon',
-        type: "boolean",
-        control: {
-          type: 'boolean',
-        }
-      },
-      variant: {
-        description: 'The color type of the alert',
-        type: "string",
-        options: ['warning', 'error', 'success', 'info'],
-        control: {
-          type: 'select',
-        }
-      },
-      border: {
-        description: 'Whether to add border on the alert',
-        type: "string",
-        options: ["left", "right", "all", "none"],
-        defaultValue: "none",
-        control: {
-          type: 'select',
-        }
-      },
+    dismissButton: {
+      description: 'Whether to show dismiss button',
+      type: "boolean",
+      control: {
+        type: 'boolean',
+      }
     },
-  } as Meta;
+    link: {
+      description: 'Add link to the alert',
+      type: "string",
+      control: {
+        type: 'object',
+      }
+    },
+    icon: {
+      description: 'Alert icon',
+      type: "boolean",
+      control: {
+        type: 'boolean',
+      }
+    },
+    variant: {
+      description: 'The color type of the alert',
+      type: "string",
+      options: ['warning', 'error', 'success', 'info'],
+      control: {
+        type: 'select',
+      }
+    },
+    border: {
+      description: 'Whether to add border on the alert',
+      type: "string",
+      options: ["left", "right", "all", "none"],
+      defaultValue: "none",
+      control: {
+        type: 'select',
+      }
+    },
+  },
+} as Meta;
 type Story = StoryObj<ToastProps>;
 
 const randomVariants = () => {

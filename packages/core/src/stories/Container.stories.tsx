@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Core/Container',
+  title: '❖ • Core/Container',
 } as Meta;
 
 export const AllContainer = () => {

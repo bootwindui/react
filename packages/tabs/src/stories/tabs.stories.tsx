@@ -1,7 +1,7 @@
 import { TabItem, Tabs } from "..";
 
 export default {
-    title: 'Components/Tabs',
+    title: '❖ • UI Components/Tabs',
     component: Tabs,
 };
 

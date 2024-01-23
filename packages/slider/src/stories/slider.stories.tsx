@@ -3,7 +3,7 @@ import React from 'react';
 import Slider from '../lib/slider';
 
 export default {
-    title: 'Components/Slider',
+    title: '❖ • Components/Slider',
     component: Slider,
 };
 

@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react';
 
 export default {
-  title: 'Components/Core/Shadows',
+  title: '❖ • Core/Shadows',
 } as Meta;
 
 export const AllShadows = () => {

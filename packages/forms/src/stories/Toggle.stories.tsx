@@ -6,7 +6,7 @@ import { Toggle, ToggleProps } from '../index';
 import { FaMoon, FaSun } from 'react-icons/fa6';
 
 export default {
-  title: 'Components/Forms/Toggle',
+  title: '❖ • Components/Toggle',
   tags: ['autodocs'],
   component: Toggle,
   argTypes: {

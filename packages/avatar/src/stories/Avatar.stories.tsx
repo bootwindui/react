@@ -5,7 +5,7 @@ import { Avatar, AvatarProps } from '../index';
 import Title from '@bootwind/title';
 
 export default {
-  title: 'Components/Avatar',
+  title: '❖ • UI Components/Avatar',
   component: Avatar,
   tags: ['autodocs'],
   argTypes: {

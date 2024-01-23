@@ -5,7 +5,7 @@ import Title from '@bootwind/title';
 import { CheckboxProps, Checkbox } from '../index';
 
 export default {
-  title: 'Components/Forms/Checkbox',
+  title: '❖ • Components/Checkbox',
   component: Checkbox,
   tags: ['autodocs'],
   argTypes: {

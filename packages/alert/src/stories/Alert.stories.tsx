@@ -5,7 +5,7 @@ import Alert, { AlertProps } from '../index';
 
 export default {
   tags: ['autodocs'],
-  title: 'Components/Alert',
+  title: '❖ • UI Components/Alert',
   component: Alert,
   args: {
     title: "Hi There!",
@@ -99,7 +99,7 @@ export const Link: Story = {
     description: "A new software update is available. See what’s new in version 2.0.4.",
     title: "Information",
     icon: true,
-    
+
     link: {
       url: 'https://google.com',
       text: 'Open link'

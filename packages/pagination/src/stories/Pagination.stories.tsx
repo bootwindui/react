@@ -5,7 +5,7 @@ import Title from '@bootwind/title';
 import { Pagination, PaginationProps } from '../index';
 
 export default {
-  title: 'Components/Pagination',
+  title: '❖ • UI Components/Pagination',
   component: Pagination,
   tags: ['autodocs'],
   args: {
@@ -53,7 +53,7 @@ export const Card = (args: PaginationProps) => {
         onPrevClick={() => onPageChange(currentPage - 1)}
         onNextClick={() => onPageChange(currentPage + 1)}
         onPageClick={page => onPageChange(page)}
-        />
+      />
     </>
   );
 };
@@ -73,7 +73,7 @@ export const Simple = (args: PaginationProps) => {
         onPrevClick={() => onPageChange(currentPage - 1)}
         onNextClick={() => onPageChange(currentPage + 1)}
         onPageClick={page => onPageChange(page)}
-        />
+      />
     </>
   );
 };
@@ -93,7 +93,7 @@ export const Centered = (args: PaginationProps) => {
         onPrevClick={() => onPageChange(currentPage - 1)}
         onNextClick={() => onPageChange(currentPage + 1)}
         onPageClick={page => onPageChange(page)}
-        />
+      />
     </>
   );
 };

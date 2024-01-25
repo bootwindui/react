@@ -1,0 +1,15 @@
+import { Meta } from '@storybook/blocks';
+import Thumbnail from './images/Thumbnail.png';
+
+<Meta title="Welcome" />
+
+export const parameters = {
+  backgrounds: {
+    default: '#6666FF', // Ganti dengan warna yang diinginkan
+  },
+  layout: 'fullscreen',
+};
+
+<div className="content">
+  <img src={Thumbnail} className="cover rounded-xl" />
+</div>

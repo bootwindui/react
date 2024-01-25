@@ -1,11 +1,13 @@
 import '../src/scss/main.scss';
 import type { Preview } from '@storybook/react';
+import BootwindTheme from './BootwindTheme';
 
 const preview: Preview = {
   parameters: {
     options: {
       storySort: {
         order: [
+          'Welcome',
           '❖ • Core',
           [
             'Typography',
@@ -44,11 +46,17 @@ const preview: Preview = {
       },
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
+    enableShortcuts: false,
     backgrounds: {
+      default: 'bootwind',
       values: [
         {
           name: 'bootwind',
           value: '#F3F4F6',
+        },
+        {
+          name: 'purple-bootwind',
+          value: '#6666FF',
         },
       ],
     },
@@ -57,6 +65,11 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      disabled: true,
+      expanded: true,
+    },
+    docs: {
+      theme: BootwindTheme,
     },
   },
 };

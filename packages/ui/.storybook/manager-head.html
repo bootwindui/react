@@ -1,0 +1,128 @@
+<style>
+  #storybook-explorer-searchfield {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    letter-spacing: -0.01em !important;
+    line-height: 14px !important;
+  }
+
+  /*
+   * Hides "Addons" button from mobile view nav.
+   */
+  nav > button:last-child {
+    display: none;
+  }
+
+  /*
+   Storybook has proposed a feature for this in https://github.com/storybookjs/storybook/issues/9209
+   which will configure stories to exist in deeplink URL format, but do not appear in the nav tree or the docs page
+   Usign suggested temporary workaround until storybook gets proper support
+   See https://github.com/microsoft/fluentui/blob/master/rfcs/convergence/authoring-stories.md#10-internal-stories-for-testing
+   */
+  [id*='accessibility-stories'] {
+    display: none !important;
+  }
+
+  /* remove margin from sidebar logo  */
+  .sidebar-header > div:first-of-type {
+    margin-right: 0;
+  }
+
+  /* remove sidebar shortcuts menu */
+  .sidebar-header > div:last-child {
+    display: none;
+  }
+
+  /* Add left side background color splash */
+  /* colors become distracting in mobile layout so scoped to where sidebar is visible */
+  @media (min-width: 600px) {
+    #root > div:before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: -200px;
+      width: 400px;
+      height: 400px;
+      background: #6666ff;
+      opacity: 0.7;
+      filter: blur(150px);
+      z-index: 100;
+    }
+
+    /* Add right side background color splash */
+    #root > div:after {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 400px;
+      height: 400px;
+      background: #b3d4ff;
+      opacity: 0.8;
+      filter: blur(150px);
+    }
+  }
+
+  /* Give sidebar a transparent white background to match design */
+  .sidebar-container {
+    background: rgba(255, 255, 255, 0.63);
+    z-index: 101 !important;
+  }
+
+  /* remove background preventing color splash from showing */
+  #storybook-preview-wrapper {
+    background: transparent;
+  }
+
+  /*
+ * Set position fixed to create a layer and prevent iframe from jumping when content is
+ * larger than the viewport and the iframe itself
+ */
+  [role='main'] {
+    position: fixed;
+  }
+
+  /* remove box shadow style from storybooks wrapper div */
+  [role='main'] > div {
+    box-shadow: none;
+  }
+
+  /* permanently hide toolbar so animation never appears on page load */
+  [role='main'] .os-host {
+    display: none;
+  }
+
+  /* stop offset from changing page dimensions when 't' is pressed and toolbar opened */
+  [role='main'] > div > div > div {
+    top: 0 !important;
+    height: 100% !important;
+  }
+
+  /* remove the docs wrapper bg to let page bg show through */
+  /* remove unnecessary padding now that theme switcher is not taking up space */
+  #docs-root .sbdocs-wrapper {
+    background: transparent !important;
+    padding-top: 0;
+  }
+
+  /* sb-show-main is missing during page transitions causing a page shift */
+  /* todo: cleanup once we no longer inherit docs-root */
+  .sb-show-main.sb-main-fullscreen,
+  .sb-main-fullscreen {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .sbdocs .sbdocs-wrapper .css-k7lbue {
+    background-color: transparent !important;
+  }
+
+  /* remove loading overlay */
+  .sb-preparing-story,
+  .sb-preparing-docs,
+  .sb-nopreview,
+  .sb-errordisplay {
+    display: none !important;
+  }
+</style>

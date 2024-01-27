@@ -29,5 +29,5 @@
     ".storybook/*.js",
     ".storybook/*.ts", 
     ".storybook/preview.tsx"  
-  ]
+, ".storybook/titleAddon.tsx"  ]
 }

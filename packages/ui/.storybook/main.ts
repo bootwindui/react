@@ -8,6 +8,7 @@ const config: StorybookConfig = {
     '../../../pages/*.stories.mdx',
     '../../**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
+  staticDirs: ['./public'],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
@@ -17,7 +18,6 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-
   viteFinal: async (config) =>
     mergeConfig(config, {
       plugins: [nxViteTsPaths()],

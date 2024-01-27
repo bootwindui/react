@@ -1,8 +1,43 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from '@storybook/addon-docs';
 
 <Meta title="Get Started" />
 
-<div classname="content">
-  <h1>Get Started</h1>
-  <h3>Test</h3>
-</div>
+## **Install**
+
+Bootwind UI should be installed as a `dependency` of your app.
+
+```sh
+yarn add @bootwindproject/bootwindui
+```
+
+## **Setup**
+
+Bootwind UI components are styled using CSS in JS. This technique requires a style renderer which inserts CSS into DOM when needed. React context is used to provide the style renderer.
+
+Place a `<BootwindProvider />` at the root of your app and pass theme as a prop.
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BootwindProvider } from '@bootwindproject/bootwindui';
+
+import App from './App';
+
+ReactDOM.render(
+  <BootwindProvider>
+    <App />
+  </BootwindProvider>,
+  document.getElementById('root')
+);
+```
+
+## **Usage**
+
+That's it. You can now use Bootwind UI components in your app.
+
+```jsx
+import React from 'react';
+import { Button } from '@bootwindproject/bootwindui';
+
+export default () => <Button color="primary">Get started</Button>;
+```

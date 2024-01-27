@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/blocks';
-import Thumbnail from './images/Thumbnail.png';
+import pkg from 'package.json';
+import Banner from './images/banner.png';
 
 <Meta title="Welcome" />
 
@@ -10,6 +11,42 @@ export const parameters = {
   layout: 'fullscreen',
 };
 
-<div className="content">
-  <img src={Thumbnail} className="cover rounded-xl" />
+<h1 class="text-center font-extrabold">Welcome to Bootwind UI Storybook! 👋🏻</h1>
+
+<img src={Banner} className="cover rounded-xl" />
+
+<h4 align="center">
+  Introducing Bootwind UI, a cutting-edge and versatile UI library designed to
+  empower developers with a seamless and efficient way to create stunning user
+  interfaces. Inspired by the popular Bootstrap framework, Bootwind UI takes the
+  concept a step further by combining the flexibility of Tailwind CSS with the
+  convenience of predefined components, resulting in a library that streamlines
+  the UI development process.
+</h4>
+
+<p align="center">
+  <a href="#tentang">Github Repository</a> • <a href="#fitur">Storybook</a> •
+  <a href="#download">Getting Started</a> • <a href="#dukungan">Contribution</a>{' '}
+  • <a href="#lisensi">License</a>
+</p>
+
+<hr />
+
+<p></p>
+
+<h3 className="fluent">Overview</h3>
+<div className="fluent-text">
+
+Welcome to Bootwind UI, where innovation meets simplicity in the realm of user interface development. Bootwind UI is a dynamic UI library designed to revolutionize your approach to building modern, responsive, and visually appealing interfaces. Whether you are a seasoned developer seeking efficiency or a newcomer looking for a powerful yet straightforward solution, Bootwind UI is your gateway to a world of possibilities.
+
+Key Features:
+
+- **Tailored for Speed and Efficiency**: Bootwind UI leverages the power of Tailwind CSS, offering developers a utility-first approach to styling. With a comprehensive set of utility classes, you can achieve a polished and professional look for your UI with minimal effort.
+- **Responsive Design**: Craft responsive interfaces effortlessly. Bootwind UI ensures that your applications look and function flawlessly across a variety of devices and screen sizes, making it easy to create a consistent user experience.
+- **Predefined Components**: Say goodbye to repetitive coding. Bootwind UI comes packed with a diverse range of pre-designed components, such as buttons, cards, modals, and navigation bars. These components can be easily customized to suit your project's unique requirements, allowing for rapid development without sacrificing creativity.
+- **Customization Without Complexity**: Tailwind CSS is known for its customization capabilities, and Bootwind UI embraces this by providing a clean and organized structure for easy theming. Tailor the library to match your brand effortlessly, ensuring a cohesive and branded look for your application.
+- **Lightweight and Performant**: Keep your application fast and efficient. Bootwind UI is designed to be lightweight, ensuring that your users enjoy a smooth and responsive experience without unnecessary bloat.
+
 </div>
+
+<p></p>

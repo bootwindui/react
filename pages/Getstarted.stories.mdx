@@ -1,14 +1,21 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Source } from '@storybook/addon-docs';
 
 <Meta title="Get Started" />
+
+# Getting Started
+
+Welcome to Bootwind UI – the ultimate toolkit for creating beautiful, responsive user interfaces with ease. Follow these steps to quickly integrate Bootwind UI into your project.
 
 ## **Install**
 
 Bootwind UI should be installed as a `dependency` of your app.
 
-```sh
+<Source
+  code={`
 yarn add @bootwindproject/bootwindui
-```
+`}
+  language="sh"
+/>
 
 ## **Setup**
 
@@ -16,7 +23,8 @@ Bootwind UI components are styled using CSS in JS. This technique requires a sty
 
 Place a `<BootwindProvider />` at the root of your app and pass theme as a prop.
 
-```jsx
+<Source
+  code={`
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BootwindProvider } from '@bootwindproject/bootwindui';
@@ -24,20 +32,22 @@ import { BootwindProvider } from '@bootwindproject/bootwindui';
 import App from './App';
 
 ReactDOM.render(
-  <BootwindProvider>
-    <App />
-  </BootwindProvider>,
-  document.getElementById('root')
-);
-```
+
+<BootwindProvider>
+  <App />
+</BootwindProvider>
+, document.getElementById('root') ); `} language="jsx" />
 
 ## **Usage**
 
 That's it. You can now use Bootwind UI components in your app.
 
-```jsx
+<Source
+  code={`
 import React from 'react';
 import { Button } from '@bootwindproject/bootwindui';
 
 export default () => <Button color="primary">Get started</Button>;
-```
+`} language="jsx" /
+
+>

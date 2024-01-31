@@ -140,32 +140,3 @@ export const LeftRightSection: Story = {
     rightSection: <HiOutlineCreditCard></HiOutlineCreditCard>
   }
 }
-
-
-
-export const Variants = (args: ToggleProps) => (
-  <>
-
-    <Title
-      title="Forms"
-      description="Forms"
-    />
-
-    <div className="mb-10">
-      <Text type='paragraph' size={2}>Default</Text>
-      <Input variant='default'  {...args}></Input>
-    </div>
-    <div className="mb-10">
-      <Text type='paragraph' size={2}>Error</Text>
-      <Input variant='error' {...args}></Input>
-    </div>
-    <div className="mb-10">
-      <Text type='paragraph' size={2}>Warning</Text>
-      <Input variant='warning' {...args}></Input>
-    </div>
-    <div className="mb-10">
-      <Text type='paragraph' size={2}>Success</Text>
-      <Input variant='success' {...args}></Input>
-    </div>
-  </>
-)

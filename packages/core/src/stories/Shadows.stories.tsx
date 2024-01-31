@@ -7,9 +7,11 @@ export default {
 export const AllShadows = () => {
 
   return (
-    <div className='bg-[#F4F5F7] p-4'>
-      <p className='px-5 mb-5'>All the shadows used by default tailwind classes https://tailwindcss.com/docs/box-shadow</p>
-      <div className="flex gap-5 mb-5 px-5">
+    <div className='bg-white rounded-md p-5'>
+      <h2 className="text-4xl font-bold text-black tracking-tight">Shadows</h2>
+      <p className='mb-5 font-semibold'>All the shadows used by default tailwind classes <a href="https://tailwindcss.com/docs/box-shadow">https://tailwindcss.com/docs/box-shadow</a></p>
+      <hr className="h-px my-4 bg-gray-400 border-0" />
+      <div className="flex gap-5 mb-5">
         <div>
           <div className="w-48 h-48 bg-white rounded-lg shadow-sm" />
           <p className='flex justify-between mt-5'>

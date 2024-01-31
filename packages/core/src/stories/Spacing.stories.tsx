@@ -7,10 +7,12 @@ export default {
 export const AllSpacing = () => {
 
   return (
-    <div className='bg-[#F4F5F7] p-4'>
-      <p className='px-5 mb-5'>All the spacing used by default tailwind classes https://tailwindcss.com/docs/theme#spacing</p>
+    <div className='bg-white p-5 rounded-md'>
+      <h2 className="text-4xl font-bold text-black tracking-tight">Spacing</h2>
+      <p className='mb-5 font-semibold'>All the spacing used by default tailwind classes <a href="https://tailwindcss.com/docs/spacing">https://tailwindcss.com/docs/spacing</a></p>
+      <hr className="h-px my-4 bg-gray-400 border-0" />
 
-      <div className="w-[843px] h-[1331px] relative bg-white">
+      <div className="w-[843px] h-[1331px] relative bg-white rounded-xl shadow-lg">
         <div className="w-px h-4 left-[257px] top-[50px] absolute bg-blue-500 rounded-[50px]" />
         <div className="w-0.5 h-4 left-[257px] top-[88px] absolute bg-blue-500 rounded-[50px]" />
         <div className="w-1 h-4 left-[257px] top-[126px] absolute bg-blue-500 rounded-[50px]" />

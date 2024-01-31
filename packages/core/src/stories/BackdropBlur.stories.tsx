@@ -11,9 +11,11 @@ export const AllBackdropBlur = () => {
             backgroundImage: "url(" + 'https://w0.peakpx.com/wallpaper/390/257/HD-wallpaper-macos-ventura-ios-16-dark-wwdc-2022-apple.jpg' + ")", backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
-        }} className='p-4'>
-            <p className='px-5 mb-8 text-white'>All the backrop blur used by default tailwind classes https://tailwindcss.com/docs/backdrop-blur</p>
-            <div className="flex gap-5 mb-5 px-5">
+        }} className='p-5 rounded-md'>
+            <h2 className="text-4xl font-bold text-white tracking-tight">Backdrop Blur</h2>
+            <p className='mb-5 font-semibold text-white'>All the backrop blur used by default tailwind classes <a href="https://tailwindcss.com/docs/backrop-blur">https://tailwindcss.com/docs/backrop-blur</a></p>
+            <hr className="h-px my-4 bg-gray-100 border-0" />
+            <div className="flex gap-5 mb-5">
                 <div>
                     <div className="w-48 h-48 bg-white/30 rounded-lg backdrop-blur-none" />
                     <p className='text-white flex justify-between mt-5'>
@@ -57,7 +59,7 @@ export const AllBackdropBlur = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-5 mb-5 px-5">
+            <div className="flex gap-5 mb-5">
                 <div>
                     <div className="w-48 h-48 bg-white/30 rounded-lg backdrop-blur-3xl" />
                     <p className='text-white flex justify-between mt-5'>

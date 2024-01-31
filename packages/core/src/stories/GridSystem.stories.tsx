@@ -7,8 +7,10 @@ export default {
 export const AllGridSystem = () => {
 
   return (
-    <div className='bg-[#F4F5F7] p-4'>
-      <p className='mb-8 text-black'>All the grid  used by default tailwind classes https://tailwindcss.com/docs/flex</p>
+    <div className='bg-white p-5 rounded-md'>
+      <h2 className="text-4xl font-bold text-black tracking-tight">Grid System</h2>
+      <p className='mb-5 font-semibold'>All the grid used by default tailwind classes <a href="https://tailwindcss.com/docs/flex">https://tailwindcss.com/docs/flex</a></p>
+      <hr className="h-px my-4 bg-gray-400 border-0" />
       <div className="w-[1360px] h-[1962px] flex-col justify-start items-start gap-[30px] inline-flex">
         <div className="flex-col justify-start items-start gap-[30px] flex">
           <div className="self-stretch h-[136px] flex-col justify-start items-start gap-[15px] flex">

@@ -21,6 +21,7 @@ export const Basic: Story = {
     color: 'primary'
   }
 }
+
 export const WithIcon: Story = {
   args: {
     color: 'primary',

@@ -40,4 +40,3 @@ export const Toggle: React.FC<ToggleProps> = ({ color, iconOn, iconOff, classNam
     </Switch>
   );
 };
-

@@ -23,7 +23,7 @@ export const TooltipContent = ({ children, className, variant, position = "top" 
     )
     return (
         <div className={classes}>
-                {children}
+            {children}
         </div>
     )
 }

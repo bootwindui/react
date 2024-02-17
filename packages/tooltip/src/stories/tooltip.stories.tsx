@@ -1,16 +1,20 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Tooltip, { TooltipProps } from '../lib/tooltip';
+import { Tooltip, TooltipProps } from '../lib/tooltip';
 import { Button } from "@bootwind/button"
 import { TooltipTrigger } from '../lib/tooltip-trigger';
 import { TooltipContent } from '../lib/tooltip-content';
 
 export default {
     title: '❖ • Components/Tooltip',
+    tags: ['autodocs'],
     component: Tooltip,
     argTypes: {
         position: {
-            control: { type: 'select', options: ['top', 'bottom', 'left', 'right'] },
+            control: 'select', options: ['top', 'bottom', 'left', 'right'],
+        },
+        variant: {
+            control: 'radio', options: ['dark', 'light'],
         },
     },
 } as Meta;
@@ -29,40 +33,40 @@ const Template: Story<TooltipProps> = (args) => (
 export const Top = Template.bind({});
 Top.args = {
     position: "top",
-    content: 'Tooltip Text',
+    content: 'Top tooltip content',
     variant: 'dark'
 };
 
 export const Bottom = Template.bind({});
 Bottom.args = {
     position: "bottom",
-    content: 'This is a custom tooltip content',
+    content: 'Bottom tooltip content',
     variant: 'dark'
 };
 
 export const Left = Template.bind({});
 Left.args = {
     position: 'left',
-    content: 'Tooltip Text',
+    content: 'Left Tooltip Text',
     variant: 'dark'
 };
 
 export const Right = Template.bind({});
 Right.args = {
     position: 'right',
-    content: 'Tooltip Text',
+    content: 'Right Tooltip Text',
     variant: 'dark'
 };
 
 export const Light = Template.bind({});
 Light.args = {
-    position: 'bottom',
+    position: 'right',
     content: 'Light Tooltip',
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
-    position: 'bottom',
+    position: 'right',
     content: 'Dark Tooltip',
     variant: 'dark'
 };

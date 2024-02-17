@@ -4,6 +4,6 @@ export interface TooltipTriggerProps {
     children: string | ReactNode
 }
 
-export const TooltipTrigger = ({children}: TooltipTriggerProps) => (
-    <div className="tooltip-trigger inline-flex " >{children}</div>
+export const TooltipTrigger = ({ children }: TooltipTriggerProps) => (
+    <div className="tooltip-trigger inline-flex">{children}</div>
 )

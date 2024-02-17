@@ -8,13 +8,10 @@ export interface TooltipProps {
   position?: "top" | "bottom" | "right" | "left";
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ children }) => {
-  
+export const Tooltip: React.FC<TooltipProps> = ({ children }) => {
   return (
-    <div className="tooltip-wrapper group relative inline-block"> 
-        {children}
+    <div className="tooltip-wrapper group relative inline-block">
+      {children}
     </div>
   );
 };
-
-export default Tooltip;

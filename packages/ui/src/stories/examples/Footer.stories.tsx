@@ -7,7 +7,7 @@ import { Input } from '@bootwind/forms'
 import { Button } from '@bootwind/button'
 
 export default {
-    title: 'Examples/Footer',
+    title: '❖ • Examples/Footer',
     argTypes: {},
 } as Meta;
 
@@ -30,13 +30,13 @@ export const FooterWithNewsletter = () => {
                                         <h4>{menu}</h4>
                                     </div>
                                     <div className="footer-menu-items ">
-                                            {menus[menu as keyof typeof menus].map(item => {
-                                                return (
-                                                    <div className="footer-menu-item mb-5">
-                                                        <a href="#" className="color-default">{item}</a>
-                                                    </div>
-                                                )
-                                            })}
+                                        {menus[menu as keyof typeof menus].map(item => {
+                                            return (
+                                                <div className="footer-menu-item mb-5">
+                                                    <a href="#" className="color-default">{item}</a>
+                                                </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             ))
@@ -45,7 +45,7 @@ export const FooterWithNewsletter = () => {
                     <div className="footer-newsletter">
                         <h4 className="font-bold text-lg mb-5">Newsletter</h4>
                         <p className="mb-8">Be the first one to know  about discounts, offers and events. Unsubscribe whenever you like.</p>
-                        <Input placeholder="Enter your email" leftSection={<HiEnvelope/>} rightSection={<Button className="mr-9">Submit</Button>}></Input>
+                        <Input placeholder="Enter your email" leftSection={<HiEnvelope />} rightSection={<Button className="mr-9">Submit</Button>}></Input>
                     </div>
                 </section>
                 <section className="footer-copyright text-center py-5">
@@ -59,14 +59,14 @@ const SocialMediaIcons = () => (
     <div className="social-media">
         <ul className="flex gap-3">
             {
-            [<BiLogoFacebookCircle/>, <BiLogoYoutube/>, <BiLogoDribbble/>, <BiLogoFigma/>, <BiLogoWhatsapp/>].map(logo => {
-                return (
-                <li>
-                    <a href="#" className="p-3 bg-indigo-100 block rounded-full">
-                        {logo}
-                    </a>
-                </li>
-                )
+                [<BiLogoFacebookCircle />, <BiLogoYoutube />, <BiLogoDribbble />, <BiLogoFigma />, <BiLogoWhatsapp />].map(logo => {
+                    return (
+                        <li>
+                            <a href="#" className="p-3 bg-indigo-100 block rounded-full">
+                                {logo}
+                            </a>
+                        </li>
+                    )
                 })
             }
         </ul>
@@ -81,9 +81,9 @@ export const FooterWithLogo = () => {
                     <div className="footer-left pr-48">
                         <h4 className="font-bold text-lg mb-5">Logo</h4>
                         <p className="mb-8">
-                        We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... Read More
+                            We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... Read More
                         </p>
-                        <SocialMediaIcons/>
+                        <SocialMediaIcons />
                     </div>
                     <div className="footer-menus grid lg:grid-cols-3">
                         {
@@ -93,13 +93,13 @@ export const FooterWithLogo = () => {
                                         <h4>{menu}</h4>
                                     </div>
                                     <div className="footer-menu-items ">
-                                            {menus[menu as keyof typeof menus].map(item => {
-                                                return (
-                                                    <div className="footer-menu-item mb-5">
-                                                        <a href="#" className="color-default">{item}</a>
-                                                    </div>
-                                                )
-                                            })}
+                                        {menus[menu as keyof typeof menus].map(item => {
+                                            return (
+                                                <div className="footer-menu-item mb-5">
+                                                    <a href="#" className="color-default">{item}</a>
+                                                </div>
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             ))

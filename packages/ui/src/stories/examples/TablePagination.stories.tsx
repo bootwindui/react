@@ -17,7 +17,7 @@ const columns = [
 ];
 
 export default {
-  title: 'Examples/Table with Pagination',
+  title: '❖ • Examples/Table with Pagination',
   component: Pagination,
   argTypes: {},
 } as Meta;

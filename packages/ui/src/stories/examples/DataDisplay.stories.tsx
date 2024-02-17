@@ -4,13 +4,13 @@ import { Table, TableBody, TableCell, TableRow } from '@bootwind/table'
 import { HiPaperClip } from 'react-icons/hi2'
 
 export default {
-    title: 'Examples/DataDisplay',
+    title: '❖ • Examples/Data Display',
     argTypes: {},
 } as Meta;
 
 export const CardWithTable = () => {
     return (
-        <Card noPadding title="Applicant Information" className="max-w-[800px] overflow-hidden" subtitle="Personal details and application."  cardHeaderBorder>
+        <Card noPadding title="Applicant Information" className="max-w-[800px] overflow-hidden" subtitle="Personal details and application." cardHeaderBorder>
             <Table variant="striped">
                 <TableBody>
                     <TableRow>
@@ -35,7 +35,7 @@ export const CardWithTable = () => {
                             <ul>
                                 <li className="flex between items-center gap-2 justify-between">
                                     <div className="name flex items-center">
-                                        <HiPaperClip/>
+                                        <HiPaperClip />
                                         <span>resume_backend_developer.zip</span>
                                     </div>
                                     <a href="#">Download</a>
@@ -48,4 +48,3 @@ export const CardWithTable = () => {
         </Card>
     )
 }
-  

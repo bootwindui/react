@@ -113,7 +113,7 @@ Bootwind uses [nx](https://github.com/nrwl/nx) as monorepo build system. You can
 <p></p>
 
 ```sh
-git clone https://github.com/bootwindui/bootwind
+git clone https://github.com/bootwindui/react
 cd bootwind
 ```
 

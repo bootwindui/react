@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="https://github.com/bootwindui/react">Github Repository</a> •
-  <a href="https://bootwindui.github.io/bootwindui/">Storybook</a> •
+  <a href="https://bootwindui.github.io/react/">Storybook</a> •
   <a href="#">Getting Started</a> •
   <a href="#">Contribution</a> •
   <a href="#">License</a>

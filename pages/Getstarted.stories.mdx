@@ -12,7 +12,7 @@ Bootwind UI should be installed as a `dependency` of your app.
 
 <Source
   code={`
-yarn add @bootwindproject/bootwindui
+yarn add @bootwindui/react
 `}
   language="sh"
 />
@@ -27,7 +27,7 @@ Place a `<BootwindProvider />` at the root of your app and pass theme as a prop.
   code={`
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BootwindProvider } from '@bootwindproject/bootwindui';
+import { BootwindProvider } from '@bootwindui/react';
 
 import App from './App';
 
@@ -45,7 +45,7 @@ That's it. You can now use Bootwind UI components in your app.
 <Source
   code={`
 import React from 'react';
-import { Button } from '@bootwindproject/bootwindui';
+import { Button } from '@bootwindui/react';
 
 export default () => <Button color="primary">Get started</Button>;
 `} language="jsx" /

@@ -10,17 +10,17 @@
 <p></p>
 
 <p align="center">
-	<img src="https://img.shields.io/github/issues/bootwindproject/bootwindui?style=flat-round">
-	<img src="https://img.shields.io/github/stars/bootwindproject/bootwindui?style=flat-round"> 
-	<img src="https://img.shields.io/github/forks/bootwindproject/bootwindui?style=flat-round">
-	<img src="https://img.shields.io/github/license/bootwindproject/bootwindui?style=flat-round">
+	<img src="https://img.shields.io/github/issues/bootwindui/react?style=flat-round">
+	<img src="https://img.shields.io/github/stars/bootwindui/react?style=flat-round"> 
+	<img src="https://img.shields.io/github/forks/bootwindui/react?style=flat-round">
+	<img src="https://img.shields.io/github/license/bootwindui/react?style=flat-round">
 	<img src="https://img.shields.io/badge/maintained%3F-yes-green.svg?style=flat-round">
 	<img src="https://img.shields.io/github/followers/bootwindproject.svg?style=flat-round&label=followers">
 </p>
 
 <p align="center">
-  <a href="https://github.com/bootwindproject/bootwindui">Github Repository</a> •
-  <a href="https://bootwindproject.github.io/bootwindui/">Storybook</a> •
+  <a href="https://github.com/bootwindui/react">Github Repository</a> •
+  <a href="https://bootwindui.github.io/bootwindui/">Storybook</a> •
   <a href="#">Getting Started</a> •
   <a href="#">Contribution</a> •
   <a href="#">License</a>
@@ -61,7 +61,7 @@ Welcome to Bootwind UI – the ultimate toolkit for creating beautiful, responsi
 <p></p>
 
 ```sh
-yarn add @bootwindproject/bootwindui
+yarn add @bootwindui/react
 ```
 
 <p></p>
@@ -73,7 +73,7 @@ Place a `<BootwindProvider />` at the root of your app and pass theme as a prop.
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BootwindProvider } from '@bootwindproject/bootwindui';
+import { BootwindProvider } from '@bootwindui/react';
 
 import App from './App';
 
@@ -92,7 +92,7 @@ That's it. You can now use Bootwind UI components in your app.
 
 ```jsx
 import React from 'react';
-import { Button } from '@bootwindproject/bootwindui';
+import { Button } from '@bootwindui/react';
 
 export default () => <Button color="primary">Get started</Button>;
 ```
